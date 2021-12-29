@@ -26,7 +26,7 @@ export SILVER_ICONS=nerd
 source <(silver init)
 source ~/.bash_aliases
 
-# My Custom Aliases
+# My  Aliases
 alias ls='figlet "Files & Folders" | lolcat && echo "==================================================================" | lolcat && ls --color=auto'
 alias me='figlet "Hello there, your Cool!!!" | lolcat && echo "==================================================================" | lolcat'
 alias neofetch='neofetch | lolcat'
@@ -35,6 +35,10 @@ alias duck="figlet q u a c c | lolcat"
 alias c="rm -rf ./.bash_history"
 alias e='printf "Bye $user " | lolcat && sleep 0 && exit'
 alias r="clear && source ~/.bashrc"
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -CF'
 
 # For Node Version Manager...
 export NVM_DIR="$HOME/.nvm"
