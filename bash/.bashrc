@@ -77,12 +77,16 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias c="rm -rf ./.bash_history"
-alias i="sudo apt install"
-alias u="sudo apt purge"
-alias u="sudo apt update"
+alias clear="rm -rf ./.bash_history"
+alias install="sudo apt install"
+alias purge="sudo apt purge"
+alias update="sudo apt update"
 alias upgrade="sudo apt upgrade -y"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
+
+#For Go
+export GOPATH=$HOME/work
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
