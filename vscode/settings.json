@@ -17,5 +17,12 @@
     "workbench.editor.untitled.hint": "hidden",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Material Theme Darker High Contrast"
+    "workbench.iconTheme": "vscode-icons",
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": false
+    },
+    "window.zoomLevel": 1
 }
