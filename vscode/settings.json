@@ -19,10 +19,10 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "vscode-icons",
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "yaml": true,
         "plaintext": true,
         "markdown": false
     },
-    "window.zoomLevel": 1
+    "workbench.colorTheme": "Tokyo Night"
 }
