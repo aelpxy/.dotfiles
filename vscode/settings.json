@@ -17,12 +17,13 @@
     "workbench.editor.untitled.hint": "hidden",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.startupEditor": "none",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "yaml": true,
         "plaintext": true,
         "markdown": false
     },
-    "workbench.colorTheme": "Tokyo Night"
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Material Theme Darker"
 }
