@@ -11,6 +11,7 @@
 # | |_) | (_| \__ \ | | | | | (__ 
 # |____/ \__,_|___/_| |_|_|  \___|
 #
+
 case $- in
     *i*) ;;
       *) return;;
@@ -77,16 +78,25 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias clear="rm -rf ./.bash_history"
-alias install="sudo apt install"
-alias purge="sudo apt purge"
-alias update="sudo apt update"
+# My Custom Aliases.
+alias c="rm -rf ./.bash_history"
+alias cls="source ~/.bashrc"
+alias python="python3"
+alias exit="exit"
+alias add="sudo apt install"
+alias remove="sudo apt purge"
+alias update="sudo apt update -y"
 alias upgrade="sudo apt upgrade -y"
+alias distro="sudo apt dist-upgrade -y"
+alias clean="sudo apt autoclean -y"
+alias autoremove="sudo apt autoremove -y"
+alias search="apt search"
 
+# Setting up node version manager.
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" 
 
-#For Go
-export GOPATH=$HOME/work
+# Setting up Go Path.
+export GOPATH=$HOME/.go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
