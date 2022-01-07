@@ -25,6 +25,6 @@
         "plaintext": true,
         "markdown": false
     },
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Material Theme Darker"
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "window.zoomLevel": 1
 }
