@@ -21,10 +21,11 @@
     "workbench.iconTheme": "material-icon-theme",
     "github.copilot.enable": {
         "*": true,
-        "yaml": true,
-        "plaintext": true,
-        "markdown": false
+        "javascript": true,
+        "typescript": true,
+        "html": false,
+        "css": false,
+        "go": true,
     },
-    "workbench.colorTheme": "Material Theme Ocean High Contrast",
-    "window.zoomLevel": 1
+    "workbench.colorTheme": "One Dark Pro"
 }
