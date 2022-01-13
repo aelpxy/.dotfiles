@@ -12,6 +12,11 @@ alias distro="sudo apt dist-upgrade -y"
 alias clean="sudo apt autoclean -y"
 alias autoremove="sudo apt autoremove -y"
 alias search="apt search"
+# Quicker navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
