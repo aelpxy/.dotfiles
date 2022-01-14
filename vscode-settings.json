@@ -19,17 +19,6 @@
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false,
-        "javascript": true,
-        "typescript": true,
-        "html": true,
-        "css": false,
-        "go": true
-    },
     "git.enableSmartCommit": true,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
