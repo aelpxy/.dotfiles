@@ -16,16 +16,18 @@ alias install="yay -S"
 alias uninstall="yay -Rnscd"
 alias cs="yay -Sc"
 alias search="yay -Ss"
-alias hc="history -c && echo 'Cleared Bash History'"
+alias rm="rm -rf"
+alias hc="history -c && history -w && echo 'Cleared history!' | lolcat"
 alias cls="clear"
 alias la="ls -a"
-alias reload="source ~/.bashrc && echo 'Reloaded!'"
+alias reload="source ~/.bashrc && echo 'Reloaded!' | lolcat"
 alias bashtop="bpytop"
-alias ve="nvim"
 alias ne="nano"
+alias neofetch="neofetch | lolcat"
 
-export PS1="\[$(tput setaf 39)\]\u\[$(tput setaf 81)\]@\[$(tput setaf 77)\]\h \[$(tput setaf 226)\]\w \[$(tput sgr0)\]$ "
+export PS1="\[$(tput setaf 226)\]\u\[$(tput setaf 220)\]@\[$(tput setaf 214)\]\h \[$(tput setaf 33)\]\w \[$(tput sgr0)\]$ "
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
