@@ -6,8 +6,8 @@
     "editor.guides.bracketPairs": true,
     "editor.suggest.preview": true,
     "editor.renderControlCharacters": true,
-    "editor.fontFamily": "Cascadia Code",
-    "editor.fontSize": 16,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 18,
     "editor.inlineSuggest.enabled": true,
     "window.titleBarStyle": "custom",
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -18,8 +18,45 @@
     "workbench.editor.untitled.hint": "hidden",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.startupEditor": "none",
-    "workbench.iconTheme": "material-icon-theme",
     "git.enableSmartCommit": true,
-    "workbench.colorTheme": "Sapphire",
-    "window.zoomLevel": 1,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "Italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "Italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "workbench.colorTheme": "GitHub Dark"
 }
