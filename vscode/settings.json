@@ -1,6 +1,5 @@
 {
     "editor.suggestSelection": "first",
-    "editor.cursorBlinking": "blink",
     "editor.fontLigatures": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
@@ -53,10 +52,9 @@
                     "storage.type.primitive"
                 ],
                 "settings": {
-                    "fontStyle": ""
+                    "fontStyle": "italic"
                 }
             }
         ]
-    },
-    "workbench.colorTheme": "GitHub Dark"
+    }
 }
