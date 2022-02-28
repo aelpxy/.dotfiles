@@ -17,11 +17,14 @@ alias install="yay -S"
 alias uninstall="yay -Rnscd"
 alias cs="yay -Sc"
 alias search="yay -Ss"
-# alias hc="history -c && history -w && echo 'Cleared history!' | lolcat"
 alias cls="clear"
-alias reload="source ~/.zshrc && echo 'Reloaded!' | lolcat"
+alias reload="source ~/.zshrc && echo 'Reloaded!'"
 alias bashtop="bpytop"
 alias ne="nano"
 
 autoload -U colors && colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+
+# fnm
+export PATH=/home/aelpxy/.fnm:$PATH
+eval "`fnm env`"
