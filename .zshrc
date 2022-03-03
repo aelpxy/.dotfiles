@@ -23,8 +23,9 @@ alias bashtop="bpytop"
 alias ne="nano"
 
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-# fnm
-export PATH=/home/aelpxy/.fnm:$PATH
-eval "`fnm env`"
+# StarShip Prompt
+eval "$(starship init zsh)"
+
+# Go ENV
+export PATH=$PATH:/usr/local/go/bin
