@@ -1,8 +1,4 @@
-#
-##
-### ~/.zshrc
-##
-#
+# ~/.zshrc
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -23,9 +19,7 @@ alias bashtop="bpytop"
 alias ne="nano"
 
 autoload -U colors && colors
-
-# StarShip Prompt
 eval "$(starship init zsh)"
+# Go Variables #
 
-# Go ENV
 export PATH=$PATH:/usr/local/go/bin
