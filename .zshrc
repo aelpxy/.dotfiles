@@ -10,7 +10,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias work="cd ~/go/src/github.com/aelpxy/"
-alias home="cd ~/"
+alias home="cd"
 alias update="yay -Syy"
 alias upgrade="yay -Syyu"
 alias install="yay -S"
@@ -39,4 +39,5 @@ autoload -U colors && colors
 eval "$(starship init zsh)"
 
 # GO PATH #
-export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
