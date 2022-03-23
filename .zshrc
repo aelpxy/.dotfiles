@@ -6,12 +6,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias .="cd .."
-alias ..="cd ../.."
-alias ...="cd ../../.."
-alias ....="cd ../../../.."
-alias .....="cd ../../../../.."
-
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
 alias work="cd ~/go/src/github.com/aelpxy/"
 alias home="cd"
 
@@ -36,6 +34,10 @@ alias e="exit"
 alias bashtop="bpytop"
 alias show="tokei"
 alias shutdown="sudo shutdown -h now"
+
+wttr(){
+  curl wttr.in/$1
+}
 
 autoload -U colors && colors
 
