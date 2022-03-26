@@ -31,6 +31,7 @@ alias l.='exa -a | egrep "^\."'
 alias cls="source ~/.zshrc && clear"
 alias cc="rm -rf ~/.cache && rm -rf .xsession-errors.old .xsession-errors && rm -rf 'Telegram Desktop'"
 alias e="exit"
+alias q="exit"
 alias bashtop="bpytop"
 alias show="tokei"
 alias shutdown="sudo shutdown -h now"
@@ -40,6 +41,10 @@ wttr(){
 }
 
 autoload -U colors && colors
+
+# ENV Vars
+
+export EDITOR=nvim
 
 # --- STARSHIP PROMPT --- #
 eval "$(starship init zsh)"
