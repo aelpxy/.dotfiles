@@ -29,7 +29,7 @@ alias lt='exa -aT --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
 
 alias cls="source ~/.zshrc && clear"
-alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors"
+alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.wget-hsts"
 alias e="exit"
 alias q="exit"
 alias bashtop="bpytop"
