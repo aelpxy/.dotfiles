@@ -10,8 +10,11 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+
 alias work="cd ~/go/src/github.com/aelpxy/"
-alias home="cd"
+alias stuff="cd ~/workspace"
+alias home="cd ~/"
 
 alias upgrade="yay -Syy && yay -Syyu"
 alias update="yay -Syy"
@@ -29,7 +32,7 @@ alias lt='exa -aT --color=always --group-directories-first'
 alias l.='exa -a | egrep "^\."'
 
 alias cls="source ~/.zshrc && clear"
-alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.wget-hsts"
+alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.wget-hsts && rm -rf ~/.cache && sudo rm -rf ./tmp/ && echo 'Garbage purged! \n'"
 alias e="exit"
 alias q="exit"
 alias bashtop="bpytop"
