@@ -38,6 +38,7 @@ alias q="exit"
 alias bashtop="bpytop"
 alias show="tokei"
 alias shutdown="sudo shutdown -h now"
+alias cat="bat"
 
 wttr(){
   curl wttr.in/$1
@@ -49,13 +50,6 @@ cheat(){
 
 autoload -U colors && colors
 
-# ENV Vars
-
-export EDITOR=nvim
-
-# --- STARSHIP PROMPT --- #
 eval "$(starship init zsh)"
-
-# --- GO PATH --- #
+export EDITOR=nvim
 export PATH=$PATH:/usr/local/go/bin
-
