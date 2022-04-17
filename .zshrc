@@ -12,8 +12,8 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 
-alias work="cd ~/go/src/github.com/aelpxy/"
-alias stuff="cd ~/workspace"
+alias space="cd ~/workspace"
+alias work="cd ~/go/src"
 alias home="cd ~/"
 
 alias upgrade="yay -Syy && yay -Syyu"
@@ -25,20 +25,21 @@ alias uninstall="yay -Rnscd"
 alias cs="yay -Sc"
 alias search="yay -Ss"
 
-alias ls='exa -al --color=always --group-directories-first'
-alias la='exa -a --color=always --group-directories-first'
-alias ll='exa -l --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
+alias ls='lsd -al --color=always'
+alias la='lsd -a --color=always'
+alias ll='lsd -l --color=always'
 
 alias cls="source ~/.zshrc && clear"
 alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.wget-hsts && sudo rm -rf ./tmp/ && echo 'Garbage purged! \n'"
 alias e="exit"
 alias q="exit"
-alias bashtop="bpytop"
+alias bashtop="~/.local/bin/btop"
+alias btop="bashtop"
 alias show="tokei"
 alias shutdown="sudo shutdown -h now"
 alias cat="bat"
+alias vi="nvim"
+alias vim="vi"
 
 wttr(){
   curl wttr.in/$1
@@ -50,6 +51,12 @@ cheat(){
 
 autoload -U colors && colors
 
-eval "$(starship init zsh)"
+# ENV Vars
+
 export EDITOR=nvim
+
+# --- STARSHIP PROMPT --- #
+eval "$(starship init zsh)"
+
+# --- GO PATH --- #
 export PATH=$PATH:/usr/local/go/bin
