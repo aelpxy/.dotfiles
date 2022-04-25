@@ -13,7 +13,7 @@ alias .....="cd ../../../.."
 
 
 alias space="cd ~/workspace"
-alias work="cd ~/go/src"
+alias work="cd ~/go/src/github.com/aelpxy/"
 alias home="cd ~/"
 
 alias upgrade="yay -Syy && yay -Syyu"
