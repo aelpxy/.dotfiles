@@ -57,6 +57,3 @@ export EDITOR=nvim
 
 # --- STARSHIP PROMPT --- #
 eval "$(starship init zsh)"
-
-# --- GO PATH --- #
-export PATH=$PATH:/usr/local/go/bin
