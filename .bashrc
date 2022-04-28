@@ -1,5 +1,5 @@
 #
-# My Personal ~/.zshrc
+# My Personal ~/.bashrc
 #
 
 alias grep='grep --color=auto'
@@ -13,7 +13,7 @@ alias .....="cd ../../../.."
 
 
 alias space="cd ~/workspace"
-alias work="cd ~/go/src/github.com/aelpxy/"
+alias work="cd ~/workspace"
 alias home="cd ~/"
 
 alias upgrade="yay -Syy && yay -Syyu"
@@ -29,7 +29,7 @@ alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
 
-alias cls="source ~/.zshrc && clear"
+alias cls="source ~/.bashrc && clear"
 alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.wget-hsts && sudo rm -rf ./tmp/ && echo 'Garbage purged! \n'"
 alias e="exit"
 alias q="exit"
@@ -37,7 +37,6 @@ alias bashtop="~/.local/bin/btop"
 alias btop="bashtop"
 alias show="tokei"
 alias shutdown="sudo shutdown -h now"
-alias cat="bat"
 alias vi="nvim"
 alias vim="vi"
 
@@ -49,11 +48,9 @@ cheat(){
   curl cht.sh/$1/$2
 }
 
-autoload -U colors && colors
+# autoload -U colors && colors
 
 # ENV Vars
-
 export EDITOR=nvim
-
-# --- STARSHIP PROMPT --- #
-eval "$(starship init zsh)"
+eval "$(starship init bash)"
+export GPG_TTY=$(tty)
