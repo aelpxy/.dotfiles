@@ -8,6 +8,6 @@ sudo pacman -S yay
 
 print "Installing required packages..."
 
-  yay -S git neofetch bpytop tokei neovim zsh starship exa bat wget curl
+  yay -S git neofetch neovim zsh starship lsb wget curl
 
 print "Finished installing packages!"
