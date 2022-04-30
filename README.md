@@ -4,18 +4,19 @@ Before you perform something, **I'm not responsible if anything goes wrong, use 
 
 ### My Setup
 
-Desktop
----
-![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/desktop.png)
+**Manjaro KDE Plasma**
 
-Neovim
 ---
-![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/neovim.png)
+![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture1.png)
 
-List directory
 ---
-![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/ls.png)
+![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture2.png)
 
-XFCE Terminal
 ---
-![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/terminal.png)
+![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture3.png)
+
+---
+![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture4.png)
+
+---
+![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture1.png)
