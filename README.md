@@ -19,4 +19,4 @@ Before you perform something, **I'm not responsible if anything goes wrong, use 
 ![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture4.png)
 
 ---
-![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture1.png)
+![](https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.github/assets/picture5.png)
