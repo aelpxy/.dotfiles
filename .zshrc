@@ -30,7 +30,7 @@ alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
 
 alias cls="source ~/.bashrc && clear"
-alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.config && rm -rf ~/.wget-hsts && sudo rm -rf ./tmp/ && echo 'Garbage purged! \n'"
+alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.cache && rm -rf ~/.wget-hsts && sudo rm -rf ./tmp/ && echo 'Garbage purged! \n'"
 alias e="exit"
 alias q="exit"
 alias bashtop="~/.local/bin/btop"
