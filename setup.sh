@@ -5,3 +5,4 @@ sudo pacman -S yay
 print "Installing required packages..."
 yay -S git neofetch neovim zsh starship lsd wget curl chromium seahorse noto-fonts-emoji
 print "Finished installing packages!"
+cd ~/ && git@github.com:Aelpxy/.dotfiles.git
