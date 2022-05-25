@@ -31,6 +31,10 @@ alias shutdown="sudo shutdown -h now"
 alias vi="nvim"
 alias vim="vi"
 
+# MY WIREGUARD STUFF
+alias wg-up="sudo wg-quick up wg0"
+alias wg-down="sudo wg-quick down wg0"
+
 wttr(){
   curl wttr.in/$1
 }
