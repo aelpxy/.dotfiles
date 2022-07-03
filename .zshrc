@@ -21,7 +21,8 @@ alias search="yay -Ss"
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
-alias cls="source ~/.zshrc && clear"
+alias cls="clear"
+alias reload="source ~/.zshrc"
 alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.cache && rm -rf ~/.wget-hsts && sudo rm -rf ./tmp/ && echo 'Garbage purged! \n'"
 alias e="exit"
 alias q="exit"
@@ -32,8 +33,8 @@ alias vi="nvim"
 alias vim="vi"
 
 # MY WIREGUARD STUFF
-alias wg-up="sudo wg-quick up wg0"
-alias wg-down="sudo wg-quick down wg0"
+alias wg-up="sudo wg-quick up london"
+alias wg-down="sudo wg-quick down london"
 
 wttr(){
   curl wttr.in/$1
