@@ -8,7 +8,7 @@ sudo pacman -S yay
 
 print "Installing required packages..."
 
-yay -S git neofetch neovim zsh lsd wget curl chromium seahorse noto-fonts-emoji ttf-nerd-fonts-symbols
+yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji ttf-nerd-fonts-symbols
 
 curl -sS https://starship.rs/install.sh | sh
 
