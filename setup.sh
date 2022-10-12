@@ -14,4 +14,8 @@ curl -sS https://starship.rs/install.sh | sh
 
 print "Finished installing packages!"
 
+mkdir ~/Workspace
+mkdir ~/.ssh
+rm -rf ~/.bash_*
+
 cd ~/ && git@github.com:Aelpxy/.dotfiles.git
