@@ -1,0 +1,53 @@
+[username]
+style_user = "green bold"
+style_root = "red bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '@ [linux](bold yellow) '
+trim_at = "."
+disabled = false
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[cmd_duration]
+min_time = 5
+show_milliseconds = false
+disabled = false
+style = "blue"
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+format = "via [$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
+
+[git_branch]
+symbol = " "
+
+[package]
+symbol = ""
+
+[golang]
+symbol = " "
+detect_files = ["go.mod"]
+
+[rust]
+symbol = " "
+delect_files = ["Cargo.toml"]
+
+[nodejs]
+format = "via [ Node.js $version](bold green)"
+detect_files = ["package.json"]
+detect_folders = ["node_modules"]
