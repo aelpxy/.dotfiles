@@ -1,5 +1,5 @@
 {
-	"name": "Development Container",
+	"name": "Container",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
@@ -31,9 +31,7 @@
 		"docker-in-docker": "latest",
 		"terraform": "latest",
 		"git": "latest",
-		"github-cli": "latest",
 		"sshd": "latest",
-		"homebrew": "latest",
 		"fish": "latest",
 		"golang": "latest"
 	}
