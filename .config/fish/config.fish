@@ -33,9 +33,5 @@ alias shutdown="sudo shutdown -h now"
 alias vi="nvim"
 alias vim="vi"
 
-# WireGuard
-alias wg-up="wg-quick up"
-alias wg-down="wg-quick down"
-
 set -x GPG_TTY (tty)
 starship init fish | source
