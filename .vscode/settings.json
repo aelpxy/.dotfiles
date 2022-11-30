@@ -5,7 +5,7 @@
     "editor.guides.bracketPairs": true,
     "editor.suggest.preview": true,
     "editor.renderControlCharacters": true,
-    "editor.fontFamily": "Source Code pro",
+    "editor.fontFamily": "SauceCodePro Nerd Font",
     "editor.fontSize": 16,
     "editor.inlineSuggest.enabled": true,
     "workbench.editor.untitled.hint": "hidden",
