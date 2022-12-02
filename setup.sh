@@ -1,21 +1,8 @@
-print "Checking for updates..."
-
 sudo pacman -Syy && sudo pacman -Syyu
-
-print "Installing Yay AUR Helper"
-
 sudo pacman -S yay
-
-print "Installing required packages..."
-
-yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji ttf-nerd-fonts-symbols
-
+sudo pacman -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel
 curl -sS https://starship.rs/install.sh | sh
-
-print "Finished installing packages!"
-
 mkdir ~/Workspace
 mkdir ~/.ssh
 rm -rf ~/.bash_*
-
 cd ~/ && git@github.com:Aelpxy/.dotfiles.git
