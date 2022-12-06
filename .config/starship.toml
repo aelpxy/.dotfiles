@@ -7,7 +7,7 @@ show_always = true
 
 [hostname]
 ssh_only = false
-format = '@ [linux](bold yellow) '
+format = '@ [ archlinux](bold yellow) '
 trim_at = "."
 disabled = false
 
@@ -42,10 +42,6 @@ symbol = ""
 [golang]
 symbol = " "
 detect_files = ["go.mod"]
-
-[rust]
-symbol = " "
-delect_files = ["Cargo.toml"]
 
 [nodejs]
 format = "via [ Node.js $version](bold green)"
