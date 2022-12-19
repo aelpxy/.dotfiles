@@ -34,4 +34,5 @@ alias vi="nvim"
 alias vim="vi"
 
 set -x GPG_TTY (tty)
+set -x PATH $PATH:/usr/local/go/bin
 starship init fish | source
