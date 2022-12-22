@@ -19,6 +19,7 @@ alias install="yay -S"
 alias uninstall="yay -Rnscd"
 alias cs="yay -Sc"
 alias search="yay -Ss"
+alias localsearch="yay -Qs"
 
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
