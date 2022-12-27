@@ -1,7 +1,7 @@
 sudo pacman -Syy
 sudo pacman -Syyu
 sudo pacman -S yay
-sudo pacman -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs-lts-hydrogen firefox npm go
+sudo pacman -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs-lts-hydrogen firefox npm go navi-bin
 
 curl -sS https://starship.rs/install.sh | sh
 
