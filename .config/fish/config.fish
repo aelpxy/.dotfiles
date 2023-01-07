@@ -26,7 +26,7 @@ alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
 
 alias cls="clear"
-alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.cache && rm -rf ~/.wget-hsts && sudo rm -rf ./tmp/ && echo 'Garbage purged!'"
+alias cc="rm -rf ~/.xsession-errors.old && rm -rf ~/.xsession-errors && rm -rf ~/.cache && rm -rf ~/.wget-hsts && sudo rm -rf ./tmp/ && rm -rf ~/.npm"
 alias e="exit"
 alias q="exit"
 alias bashtop="btop"
