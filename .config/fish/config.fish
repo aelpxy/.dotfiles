@@ -33,6 +33,11 @@ alias bashtop="btop"
 alias shutdown="sudo shutdown -h now"
 alias vi="nvim"
 alias vim="vi"
+alias reload="source ~/.config/fish/config.fish"
+
+function weather
+	command curl -s https://wttr.in/$argv
+end
 
 set -x GPG_TTY (tty)
 set -x PATH $PATH:/usr/local/go/bin
