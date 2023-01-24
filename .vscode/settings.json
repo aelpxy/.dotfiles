@@ -1,12 +1,13 @@
 {
     "editor.suggestSelection": "first",
+    "window.titleBarStyle": "custom",
     "editor.fontLigatures": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
     "editor.suggest.preview": true,
     "editor.renderControlCharacters": true,
     "editor.fontFamily": "SauceCodePro Nerd Font",
-    "editor.fontSize": 16,
+    "editor.fontSize": 18,
     "editor.inlineSuggest.enabled": true,
     "workbench.editor.untitled.hint": "hidden",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
@@ -49,9 +50,8 @@
         ]
     },
     "go.toolsManagement.autoUpdate": true,
-    "workbench.colorTheme": "Tokyo Night",
-    "workbench.iconTheme": "material-icon-theme",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.iconTheme": "material-icon-theme",
 }
