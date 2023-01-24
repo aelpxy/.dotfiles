@@ -9,13 +9,9 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"dbaeumer.vscode-eslint",
 				"Prisma.prisma",
-				"astro-build.astro-vscode",
 				"golang.go",
 				"PKief.material-icon-theme",
-				"esbenp.prettier-vscode",
-				"enkia.tokyo-night",
 				"bradlc.vscode-tailwindcss",
 				"VisualStudioExptTeam.vscodeintellicode",
 				"VisualStudioExptTeam.intellicode-api-usage-examples"
@@ -26,13 +22,10 @@
 		3000,
 		8080
 	],
-	"remoteUser": "node",
+	"remoteUser": "penguin",
 	"features": {
 		"docker-in-docker": "latest",
-		"terraform": "latest",
 		"git": "latest",
-		"sshd": "latest",
-		"fish": "latest",
 		"golang": "latest"
 	}
 }
