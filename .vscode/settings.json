@@ -26,6 +26,7 @@
                     "string.url",
                     "variable.language.super",
                     "variable.language.this",
+                    "variable"
                 ],
                 "settings": {
                     "fontStyle": "italic"
