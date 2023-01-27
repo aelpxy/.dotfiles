@@ -41,5 +41,4 @@ end
 
 set -x GPG_TTY (tty)
 set -x PATH $PATH:/usr/local/go/bin
-set -x PATH $HOME/.cargo/bin $PATH
 starship init fish | source
