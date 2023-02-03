@@ -1,6 +1,6 @@
 # .dotfiles
 
-![](https://s3.eu-west-2.amazonaws.com/xoniacdn/files/channels/1541089695956471808/DU0a0-image.png)
+![](https://res.cloudinary.com/velta/image/upload/v1675420259/images/image_nfyzco.png)
 
 # License
 [MIT](./LICENSE)
