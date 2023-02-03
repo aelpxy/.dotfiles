@@ -6,7 +6,7 @@
     "editor.guides.bracketPairs": true,
     "editor.suggest.preview": true,
     "editor.renderControlCharacters": true,
-    "editor.fontFamily": "SauceCodePro Nerd Font",
+    "editor.fontFamily": "FiraCode Nerd Font",
     "editor.fontSize": 18,
     "editor.inlineSuggest.enabled": true,
     "workbench.editor.untitled.hint": "hidden",
