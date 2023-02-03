@@ -5,9 +5,15 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 
-sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs npm btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord
+sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs npm btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord zip unzip
 
 curl -sS https://starship.rs/install.sh | sh
+
+mkdir ~/.fonts
+
+cd ~/.fonts && mkdir FiraCode && cd FiraCode && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip && unzip FiraCode.zip
+
+fc-cache -v
 
 # Instant setup
 mkdir ~/Workspace
@@ -24,3 +30,5 @@ curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/alacritt
 
 # TODO: Do not hardcode username
 curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.gitconfig >> /home/aelpxy/.gitconfig
+
+sudo reboot
