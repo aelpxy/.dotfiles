@@ -1,9 +1,11 @@
 CONFIG_DIR="/home/aelpxy/.config"
 
-sudo pacman -Syy
-sudo pacman -Syyu
-sudo pacman -S yay
-sudo pacman -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs npm go fzf alacritty insomnia-bin visual-studio-code-bin
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+
+sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs npm btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord
 
 curl -sS https://starship.rs/install.sh | sh
 
