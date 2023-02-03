@@ -3,7 +3,7 @@ CONFIG_DIR="/home/aelpxy/.config"
 sudo pacman -Syy
 sudo pacman -Syyu
 sudo pacman -S yay
-sudo pacman -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs-lts-hydrogen firefox npm go navi-bin fzf alacritty insomnia-bin visual-studio-code-bin
+sudo pacman -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs npm go fzf alacritty insomnia-bin visual-studio-code-bin
 
 curl -sS https://starship.rs/install.sh | sh
 
@@ -18,5 +18,7 @@ curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/starship
 curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/neofetch/config.conf >> $CONFIG_DIR/neofetch/config.conf
 curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/fish/config.fish >> $CONFIG_DIR/fish/config.fish
 curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/btop/btop.conf >> $CONFIG_DIR/btop/btop.conf
+curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/alacritty/alacritty.yml >> $CONFIG_DIR/alacritty/alacritty.yml
+
 # TODO: Do not hardcode username
 curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.gitconfig >> /home/aelpxy/.gitconfig
