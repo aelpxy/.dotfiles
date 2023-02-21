@@ -39,7 +39,7 @@ function weather
         command curl -s https://wttr.in/$argv
 end
 
-clean_cache () {
+function clean_cache
   rm -rf ~/.xsession-errors.old
   rm -rf ~/.xsession-errors
   rm -rf ~/.cache
@@ -49,7 +49,7 @@ clean_cache () {
   sudo journalctl --rotate   # rotate the journal files
   sudo journalctl --vacuum-time=1s   # delete all journal files older than 1 second
   yay -Scc --noconfirm   # remove cached package files from pacman
-}
+end
 
 set -x GPG_TTY (tty)
 set -x PATH $PATH:/usr/local/go/bin
