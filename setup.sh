@@ -1,34 +1,42 @@
-CONFIG_DIR="/home/aelpxy/.config"
+#!/bin/bash
 
+# Install dependencies
 sudo pacman -S --needed git base-devel
+
+# Install yay from AUR
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 
+# Install packages using yay
 sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs npm btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord zip unzip
 
-curl -sS https://starship.rs/install.sh | sh
+# Install and configure Starship prompt
+curl -sS https://starship.rs/install.sh | bash -s -- -y
+mkdir -p ~/.config && touch ~/.config/starship.toml
+curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/starship.toml > ~/.config/starship.toml
 
-mkdir ~/.fonts
-
-cd ~/.fonts && mkdir FiraCode && cd FiraCode && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip && unzip FiraCode.zip
-
+# Install FiraCode font
+mkdir -p ~/.fonts/FiraCode
+cd ~/.fonts/FiraCode && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip && unzip FiraCode.zip
 fc-cache -v
 
-# Instant setup
-mkdir ~/Workspace
-mkdir ~/.ssh && chmod 700 ~/.ssh
-rm -rf ~/.bash_*
-cd $CONFIG_DIR && mkdir alacritty neofetch btop fish
+# Create directories for configuration files
+CONFIG_DIR="$HOME/.config"
+mkdir -p "$CONFIG_DIR"/alacritty "$CONFIG_DIR"/neofetch "$CONFIG_DIR"/btop "$CONFIG_DIR"/fish
 
-# I don't know if there's a better way than this :/
-curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/starship.toml >> $CONFIG_DIR/starship.toml
-curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/neofetch/config.conf >> $CONFIG_DIR/neofetch/config.conf
-curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/fish/config.fish >> $CONFIG_DIR/fish/config.fish
-curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/btop/btop.conf >> $CONFIG_DIR/btop/btop.conf
-curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/alacritty/alacritty.yml >> $CONFIG_DIR/alacritty/alacritty.yml
+# Download configuration files
+curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/neofetch/config.conf > "$CONFIG_DIR"/neofetch/config.conf
+curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/fish/config.fish > "$CONFIG_DIR"/fish/config.fish
+curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/btop/btop.conf > "$CONFIG_DIR"/btop/btop.conf
+curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/alacritty/alacritty.yml > "$CONFIG_DIR"/alacritty/alacritty.yml
 
-# TODO: Do not hardcode username
-curl -L https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.gitconfig >> /home/aelpxy/.gitconfig
+# Copy Git config file
+curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.gitconfig > "$HOME"/.gitconfig
 
+# Change default shell to Fish
+FISH_PATH=$(which fish)
+sudo chsh -s "$FISH_PATH" "$USER"
+
+# Reboot the system
 sudo reboot
