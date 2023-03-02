@@ -26,7 +26,7 @@
                     "string.url",
                     "variable.language.super",
                     "variable.language.this",
-                    "variable"
+                    "variable.language"
                 ],
                 "settings": {
                     "fontStyle": "italic"
@@ -50,9 +50,10 @@
             }
         ]
     },
+    "gopls": { "ui.semanticTokens": true },
     "go.toolsManagement.autoUpdate": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.colorTheme": "Tokyo Night",
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Tokyo Night"
 }
