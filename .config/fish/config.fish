@@ -40,7 +40,7 @@ function clean_cache
     rm -rf ~/.xsession-errors
     rm -rf ~/.cache
     rm -rf ~/.wget-hsts
-    sudo rm -rf ./tmp/
+    sudo rm -rf /tmp/
     rm -rf ~/.npm
     sudo journalctl --rotate
     sudo journalctl --vacuum-time=1s
