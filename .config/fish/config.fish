@@ -29,6 +29,7 @@ alias vi="nvim"
 alias vim="vi"
 alias reload="source ~/.config/fish/config.fish"
 alias cc='clean_cache'
+alias npm="pnpm"
 
 # Functions
 function weather
@@ -53,3 +54,10 @@ set -x PATH $PATH:/usr/local/go/bin
 
 # Shell prompt
 starship init fish | source
+
+# pnpm
+set -gx PNPM_HOME "/home/aelpxy/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
