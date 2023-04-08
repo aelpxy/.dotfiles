@@ -1,6 +1,6 @@
 {
-    "editor.suggestSelection": "first",
     "window.titleBarStyle": "custom",
+    "editor.suggestSelection": "first",
     "editor.fontLigatures": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
@@ -9,6 +9,7 @@
     "editor.fontFamily": "FiraCode Nerd Font",
     "editor.fontSize": 18,
     "editor.inlineSuggest.enabled": true,
+    "explorer.autoReveal": true,
     "workbench.editor.untitled.hint": "hidden",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "workbench.startupEditor": "none",
@@ -50,10 +51,25 @@
             }
         ]
     },
-    "gopls": { "ui.semanticTokens": true },
+    "gopls": {
+        "ui.semanticTokens": true
+    },
     "go.toolsManagement.autoUpdate": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.format.enable": true,
+    "typescript.format.insertSpaceAfterConstructor": true,
+    "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "markdown.preview.scrollEditorWithPreview": true,
+    "markdown.preview.scrollPreviewWithEditor": true,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Tokyo Night"
+    "workbench.colorTheme": "Tokyo Night",
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 }
