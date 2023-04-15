@@ -9,7 +9,7 @@ cd yay-bin
 makepkg -si
 
 # Install packages using yay
-sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs npm btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord zip unzip
+sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord zip unzip
 
 # Install and configure Starship prompt
 curl -sS https://starship.rs/install.sh | bash -s -- -y
@@ -33,6 +33,9 @@ curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/alacrit
 
 # Copy Git config file
 curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.gitconfig > "$HOME"/.gitconfig
+
+# Install pnpm
+curl -fsSL https://get.pnpm.io/install.sh | sh -
 
 # Change default shell to Fish
 FISH_PATH=$(which fish)
