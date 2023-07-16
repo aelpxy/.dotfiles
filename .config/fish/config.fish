@@ -51,9 +51,9 @@ end
 function clean_cache
     rm -rf ~/.xsession-errors.old
     rm -rf ~/.xsession-errors
-    rm -rf ~/.cache
+    rm -rf ~/.cache/*
     rm -rf ~/.wget-hsts
-    sudo rm -rf /tmp/
+    sudo rm -rf /tmp/*
     sudo journalctl --rotate
     sudo journalctl --vacuum-time=1s
     yay -Scc --noconfirm
