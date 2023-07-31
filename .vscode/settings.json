@@ -27,10 +27,10 @@
                     "string.url",
                     "variable.language.super",
                     "variable.language.this",
-                    "variable.language",
+                    "variable.language"
                 ],
                 "settings": {
-                    "fontStyle": "italic",
+                    "fontStyle": "italic"
                 }
             },
             {
@@ -84,5 +84,5 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.colorTheme": "Tokyo Night",
-    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
