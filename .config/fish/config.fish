@@ -39,6 +39,10 @@ alias gco='git checkout'
 alias gp='git pull'
 alias gph='git push'
 
+# Wireguard
+alias wgon='sudo wg-quick up'
+alias wgoff='sudo wg-quick down'
+
 # Functions
 function weather
     command curl -s https://wttr.in/$argv
