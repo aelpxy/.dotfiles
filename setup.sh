@@ -9,7 +9,7 @@ cd yay-bin
 makepkg -si
 
 # Install packages using yay
-sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord zip unzip flameshot tree jq tokei
+sudo yay -S git neofetch neovim fish lsd wget curl chromium seahorse noto-fonts-emoji base-devel nodejs btop go fzf alacritty insomnia-bin visual-studio-code-bin spotify discord zip unzip flameshot tree jq tokei wireguard-tools openresolv
 
 # Install and configure Starship prompt
 curl -sS https://starship.rs/install.sh | sh
