@@ -31,14 +31,6 @@ alias reload="source ~/.config/fish/config.fish"
 alias cc='clean_cache'
 alias npm="pnpm"
 
-# Git aliases
-alias ga='git add'
-alias gs='git status'
-alias gc='git commit'
-alias gco='git checkout'
-alias gp='git pull'
-alias gph='git push'
-
 # Wireguard
 alias wgon='sudo wg-quick up'
 alias wgoff='sudo wg-quick down'
