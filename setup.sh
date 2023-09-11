@@ -21,6 +21,9 @@ mkdir -p ~/.fonts/FiraCode
 cd ~/.fonts/FiraCode && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/FiraCode.zip && unzip FiraCode.zip
 fc-cache -v
 
+# Install Bun
+curl -fsSL https://bun.sh/install | bash
+
 # Create directories for configuration files
 CONFIG_DIR="$HOME/.config"
 mkdir -p "$CONFIG_DIR"/alacritty "$CONFIG_DIR"/neofetch "$CONFIG_DIR"/btop "$CONFIG_DIR"/fish
