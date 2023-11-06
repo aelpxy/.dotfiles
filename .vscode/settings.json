@@ -1,18 +1,20 @@
 {
   "window.titleBarStyle": "custom",
+  "explorer.autoReveal": true,
   "editor.suggestSelection": "first",
   "editor.fontLigatures": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.suggest.preview": true,
   "editor.renderControlCharacters": true,
-  "editor.fontFamily": "Cascadia Code",
+  "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontSize": 18,
   "editor.inlineSuggest.enabled": true,
-  "explorer.autoReveal": true,
-  "workbench.editor.untitled.hint": "hidden",
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "workbench.startupEditor": "none",
+  "editor.smoothScrolling": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.autoClosingBrackets": "always",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -83,9 +85,13 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Tokyo Night",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.empty.hint": "hidden",
+  "window.zoomLevel": 1,
+  "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
