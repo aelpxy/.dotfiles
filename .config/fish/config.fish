@@ -24,12 +24,14 @@ alias cls="clear"
 alias e="exit"
 alias q="exit"
 alias bashtop="btop"
+alias htop="btop"
 alias shutdown="sudo shutdown -h now"
 alias vi="nvim"
 alias vim="vi"
 alias reload="source ~/.config/fish/config.fish"
 alias cc='clean_cache'
 alias npm="pnpm"
+alias header="curl -I"
 
 # Wireguard
 alias wgon='sudo wg-quick up'
