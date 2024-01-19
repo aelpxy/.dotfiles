@@ -17,9 +17,9 @@ mkdir -p ~/.config && touch ~/.config/starship.toml
 curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.config/starship.toml > ~/.config/starship.toml
 
 # Install FiraCode font
-mkdir -p ~/.fonts/FiraCode
-cd ~/.fonts/FiraCode && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip && unzip FiraCode.zip
-fc-cache -v
+# mkdir -p ~/.fonts/FiraCode
+# cd ~/.fonts/FiraCode && wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip && unzip FiraCode.zip
+# fc-cache -v
 
 # Install JetBrains font
 mkdir -p ~/.fonts/JetBrainsMono
