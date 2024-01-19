@@ -59,6 +59,7 @@ end
 # Environment variables
 set -x GPG_TTY (tty)
 set -x PATH $PATH:/usr/local/go/bin
+set -x PATH $PATH:/$HOME/.cargo/bin
 
 # Shell prompt
 starship init fish | source

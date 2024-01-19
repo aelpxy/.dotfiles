@@ -42,6 +42,9 @@ curl -sS https://raw.githubusercontent.com/Aelpxy/.dotfiles/main/.gitconfig > "$
 # Install pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Change default shell to Fish
 FISH_PATH=$(which fish)
 sudo chsh -s "$FISH_PATH" "$USER"
