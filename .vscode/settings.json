@@ -7,7 +7,7 @@
   "editor.guides.bracketPairs": true,
   "editor.suggest.preview": true,
   "editor.renderControlCharacters": true,
-  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontSize": 18,
   "editor.inlineSuggest.enabled": true,
   "workbench.startupEditor": "none",
@@ -93,5 +93,6 @@
   "window.zoomLevel": 1,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.colorTheme": "Vitesse Dark"
 }
