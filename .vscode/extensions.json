@@ -1,30 +1,6 @@
 [
   {
     "identifier": {
-      "id": "golang.go",
-      "uuid": "d6f6cfea-4b6f-41f4-b571-6ad2ab7918da"
-    },
-    "version": "0.40.1",
-    "location": {
-      "$mid": 1,
-      "path": "/home/aelpxy/.vscode/extensions/golang.go-0.40.1",
-      "scheme": "file"
-    },
-    "relativeLocation": "golang.go-0.40.1",
-    "metadata": {
-      "id": "d6f6cfea-4b6f-41f4-b571-6ad2ab7918da",
-      "publisherId": "dbf6ae0a-da75-4167-ac8b-75b4512f2153",
-      "publisherDisplayName": "Go Team at Google",
-      "targetPlatform": "undefined",
-      "updated": false,
-      "isPreReleaseVersion": false,
-      "installedTimestamp": 1704011229076,
-      "pinned": false,
-      "preRelease": false
-    }
-  },
-  {
-    "identifier": {
       "id": "esbenp.prettier-vscode",
       "uuid": "96fa4707-6983-4489-b7c5-d5ffdfdcce90"
     },
@@ -43,30 +19,6 @@
       "updated": false,
       "isPreReleaseVersion": false,
       "installedTimestamp": 1704011236315,
-      "pinned": false,
-      "preRelease": false
-    }
-  },
-  {
-    "identifier": {
-      "id": "dbaeumer.vscode-eslint",
-      "uuid": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a"
-    },
-    "version": "2.4.2",
-    "location": {
-      "$mid": 1,
-      "path": "/home/aelpxy/.vscode/extensions/dbaeumer.vscode-eslint-2.4.2",
-      "scheme": "file"
-    },
-    "relativeLocation": "dbaeumer.vscode-eslint-2.4.2",
-    "metadata": {
-      "id": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a",
-      "publisherId": "29859a75-d81b-4f0e-8578-2c80ecee6f99",
-      "publisherDisplayName": "Microsoft",
-      "targetPlatform": "undefined",
-      "updated": false,
-      "isPreReleaseVersion": false,
-      "installedTimestamp": 1704275370983,
       "pinned": false,
       "preRelease": false
     }
@@ -171,16 +123,90 @@
   },
   {
     "identifier": {
+      "id": "dbaeumer.vscode-eslint",
+      "uuid": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a"
+    },
+    "version": "2.4.4",
+    "location": {
+      "$mid": 1,
+      "path": "/home/aelpxy/.vscode/extensions/dbaeumer.vscode-eslint-2.4.4",
+      "scheme": "file"
+    },
+    "relativeLocation": "dbaeumer.vscode-eslint-2.4.4",
+    "metadata": {
+      "id": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a",
+      "publisherId": "29859a75-d81b-4f0e-8578-2c80ecee6f99",
+      "publisherDisplayName": "Microsoft",
+      "targetPlatform": "undefined",
+      "isApplicationScoped": false,
+      "updated": true,
+      "isPreReleaseVersion": false,
+      "installedTimestamp": 1705934757221,
+      "pinned": false,
+      "preRelease": false
+    }
+  },
+  {
+    "identifier": {
+      "id": "golang.go",
+      "uuid": "d6f6cfea-4b6f-41f4-b571-6ad2ab7918da"
+    },
+    "version": "0.40.3",
+    "location": {
+      "$mid": 1,
+      "path": "/home/aelpxy/.vscode/extensions/golang.go-0.40.3",
+      "scheme": "file"
+    },
+    "relativeLocation": "golang.go-0.40.3",
+    "metadata": {
+      "id": "d6f6cfea-4b6f-41f4-b571-6ad2ab7918da",
+      "publisherId": "dbf6ae0a-da75-4167-ac8b-75b4512f2153",
+      "publisherDisplayName": "Go Team at Google",
+      "targetPlatform": "undefined",
+      "isApplicationScoped": false,
+      "updated": true,
+      "isPreReleaseVersion": false,
+      "installedTimestamp": 1705982031551,
+      "pinned": false,
+      "preRelease": false
+    }
+  },
+  {
+    "identifier": {
+      "id": "rust-lang.rust-analyzer",
+      "uuid": "06574cb4-e5dc-4631-8174-a543a4533621"
+    },
+    "version": "0.3.1823",
+    "location": {
+      "$mid": 1,
+      "path": "/home/aelpxy/.vscode/extensions/rust-lang.rust-analyzer-0.3.1823-linux-x64",
+      "scheme": "file"
+    },
+    "relativeLocation": "rust-lang.rust-analyzer-0.3.1823-linux-x64",
+    "metadata": {
+      "id": "06574cb4-e5dc-4631-8174-a543a4533621",
+      "publisherId": "cb14a7a7-a188-40bd-a953-e0a20757c5dd",
+      "publisherDisplayName": "The Rust Programming Language ",
+      "targetPlatform": "linux-x64",
+      "updated": false,
+      "isPreReleaseVersion": false,
+      "installedTimestamp": 1706686826702,
+      "pinned": false,
+      "preRelease": false
+    }
+  },
+  {
+    "identifier": {
       "id": "prisma.prisma",
       "uuid": "33ce9d6b-41cf-4972-a62b-386f7201981d"
     },
-    "version": "5.8.1",
+    "version": "5.9.1",
     "location": {
       "$mid": 1,
-      "path": "/home/aelpxy/.vscode/extensions/prisma.prisma-5.8.1",
+      "path": "/home/aelpxy/.vscode/extensions/prisma.prisma-5.9.1",
       "scheme": "file"
     },
-    "relativeLocation": "prisma.prisma-5.8.1",
+    "relativeLocation": "prisma.prisma-5.9.1",
     "metadata": {
       "id": "33ce9d6b-41cf-4972-a62b-386f7201981d",
       "publisherId": "2397d6f3-c7f1-4b03-9029-414f731a68ec",
@@ -189,7 +215,8 @@
       "isApplicationScoped": false,
       "updated": true,
       "isPreReleaseVersion": false,
-      "installedTimestamp": 1705327542727,
+      "hasPreReleaseVersion": false,
+      "installedTimestamp": 1706812652192,
       "pinned": false,
       "preRelease": false
     }

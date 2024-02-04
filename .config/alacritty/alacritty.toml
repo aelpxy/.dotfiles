@@ -59,7 +59,8 @@ save_to_clipboard = false
 program = "/usr/bin/fish"
 
 [window]
-opacity = 0.9
+opacity = 0.8
+blur = true
 
 [window.class]
 general = "Alacritty"

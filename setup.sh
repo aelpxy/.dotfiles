@@ -49,5 +49,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 FISH_PATH=$(which fish)
 sudo chsh -s "$FISH_PATH" "$USER"
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl -fsSL https://bun.sh/install | bash
+
 # Reboot the system
 sudo reboot

@@ -90,9 +90,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.editor.empty.hint": "hidden",
-  "window.zoomLevel": 1,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Vitesse Dark"
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Vitesse Dark",
 }

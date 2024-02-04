@@ -57,6 +57,7 @@ function clean_cache
 end
 
 # Environment variables
+
 set -x GPG_TTY (tty)
 set -x PATH $PATH:/usr/local/go/bin
 set -x PATH $PATH:/$HOME/.cargo/bin
@@ -65,7 +66,7 @@ set -x PATH $PATH:/$HOME/.cargo/bin
 starship init fish | source
 
 # For alacritty
-set -x TERM "xterm-256color"             
+set -x TERM "xterm-256color"
 set -x EDITOR "micro"
 
 # pnpm
