@@ -15,6 +15,7 @@
   "editor.acceptSuggestionOnEnter": "on",
   "editor.autoClosingBrackets": "always",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "git.openRepositoryInParentFolders": "always",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -94,5 +95,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Vitesse Dark",
+  "[mdx]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  },
+  "workbench.colorTheme": "Vitesse Dark"
 }
