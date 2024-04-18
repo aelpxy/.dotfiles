@@ -15,6 +15,8 @@
   "editor.acceptSuggestionOnEnter": "on",
   "editor.autoClosingBrackets": "always",
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
   "git.openRepositoryInParentFolders": "always",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -58,6 +60,7 @@
     "ui.semanticTokens": true
   },
   "go.toolsManagement.autoUpdate": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.format.enable": true,
   "typescript.format.insertSpaceAfterConstructor": true,
@@ -67,7 +70,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.empty.hint": "hidden",
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
@@ -86,11 +89,9 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.editor.empty.hint": "hidden",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -98,5 +99,7 @@
   "[mdx]": {
     "editor.defaultFormatter": "unifiedjs.vscode-mdx"
   },
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Vitesse Dark"
 }
