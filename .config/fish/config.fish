@@ -71,7 +71,7 @@ set -x TERM "xterm-256color"
 set -x EDITOR "micro"
 
 # pnpm
-set -gx PNPM_HOME "/home/aelpxy/.local/share/pnpm"
+set -gx PNPM_HOME "/home/$USER/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
