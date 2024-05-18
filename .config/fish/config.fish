@@ -32,6 +32,7 @@ alias reload="source ~/.config/fish/config.fish"
 alias cc='clean_cache'
 alias npm="pnpm"
 alias header="curl -I"
+alias clock="timedatectl"
 
 # Wireguard
 alias wgon='sudo wg-quick up'
