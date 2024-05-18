@@ -2,7 +2,7 @@ if status is-interactive
     set -g fish_greeting
 end
 
-# Aliases
+# aliases
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -72,7 +72,7 @@ set -x TERM "xterm-256color"
 set -x EDITOR "micro"
 
 # pnpm
-set -gx PNPM_HOME "/home/aelpxy/.local/share/pnpm"
+set -gx PNPM_HOME "/home/$USER/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
