@@ -70,6 +70,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
+
   "workbench.editor.empty.hint": "hidden",
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
@@ -97,9 +98,10 @@
   },
   "window.zoomLevel": 1,
   "[mdx]": {
-    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Vitesse Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Vitesse Dark"
+  "prisma.showPrismaDataPlatformNotification": false
 }

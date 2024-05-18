@@ -2,7 +2,7 @@ if status is-interactive
     set -g fish_greeting
 end
 
-# Aliases
+# aliases
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
