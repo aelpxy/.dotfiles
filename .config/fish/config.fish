@@ -34,11 +34,9 @@ alias npm="pnpm"
 alias header="curl -I"
 alias clock="timedatectl"
 
-# Wireguard
 alias wgon='sudo wg-quick up'
 alias wgoff='sudo wg-quick down'
 
-# Functions
 function weather
     command curl -s https://wttr.in/$argv
 end
@@ -58,22 +56,17 @@ function clean_cache
     history clear
 end
 
-# Environment variables
-
 set -x GPG_TTY (tty)
 set -x PATH $PATH:/usr/local/go/bin
-set -x PATH $PATH:/$HOME/.cargo/bin
 
-# Shell prompt
-starship init fish | source
-
-# For alacritty
 set -x TERM "xterm-256color"
 set -x EDITOR "micro"
 
-# pnpm
 set -gx PNPM_HOME "/home/$USER/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
-# pnpm end
+
+source "$HOME/.cargo/env.fish"
+
+starship init fish | source
