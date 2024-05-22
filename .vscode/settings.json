@@ -17,7 +17,7 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
-  "git.openRepositoryInParentFolders": "always",
+  "editor.formatOnSave": true,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -70,11 +70,12 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
-
   "workbench.editor.empty.hint": "hidden",
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Vitesse Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 1,
+  "git.openRepositoryInParentFolders": "always",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -96,12 +97,11 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": 1,
   "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Vitesse Dark",
-  "workbench.iconTheme": "material-icon-theme",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
   "prisma.showPrismaDataPlatformNotification": false
 }
