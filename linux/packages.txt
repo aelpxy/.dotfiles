@@ -25,3 +25,11 @@ whois
 starship
 sttr-bin
 nmap
+netcat
+zoxide
+bat
+broot
+duf
+gping
+dog
+navi

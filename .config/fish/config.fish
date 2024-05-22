@@ -70,3 +70,4 @@ end
 source "$HOME/.cargo/env.fish"
 
 starship init fish | source
+zoxide init fish | source
