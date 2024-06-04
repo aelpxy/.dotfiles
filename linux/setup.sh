@@ -2,7 +2,7 @@
 
 CONFIG_DIR="$HOME/.config"
 RAW_GITHUB_URL="raw.githubusercontent.com/aelpxy/.dotfiles/main"
-FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip"
+FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip"
 
 if [ "$USER" != "aelpxy" ]; then
     echo "WARNING: DO NOT RUN THE SCRIPT IF YOU DON'T TRUST ME."
