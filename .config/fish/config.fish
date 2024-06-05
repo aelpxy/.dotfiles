@@ -3,20 +3,20 @@ if status is-interactive
 end
 
 # aliases
+alias ..="z .."
+alias ...="z ../.."
+alias ....="z ../../.."
+alias .....="z ../../../.."
+alias work="z ~/Workspace"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias work="cd ~/Workspace"
 alias upgrade="yay -Syyu"
 alias update="yay -Syy"
 alias install="yay -S"
 alias uninstall="yay -Rnscd"
 alias search="yay -Ss"
-alias localsearch="yay -Qs"
+alias sl="yay -Qs"
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
@@ -57,17 +57,15 @@ function clean_cache
 end
 
 set -x GPG_TTY (tty)
+set -x -U GOPATH $HOME/.go
 set -x PATH $PATH:/usr/local/go/bin
-
 set -x TERM "xterm-256color"
 set -x EDITOR "micro"
-
 set -gx PNPM_HOME "/home/$USER/.local/share/pnpm"
+
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 
-source "$HOME/.cargo/env.fish"
-
-starship init fish | source
 zoxide init fish | source
+starship init fish | source

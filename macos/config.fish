@@ -3,14 +3,14 @@ if status is-interactive
 end
 
 # Aliases
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias work="cd ~/Workspace"
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
@@ -30,8 +30,6 @@ alias header="curl -I"
 set -x GPG_TTY (tty)
 fish_add_path "/opt/homebrew/bin/"
 
-starship init fish | source
-
 function clean_cache
     rm -rf ~/.xsession-errors.old
     rm -rf ~/.xsession-errors
@@ -41,3 +39,4 @@ function clean_cache
     history clear
 end
 
+starship init fish | source

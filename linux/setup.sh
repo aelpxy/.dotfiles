@@ -21,7 +21,7 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 
-curl -sS https://$RAW_GITHUB_URL/linux/packages.txt > ~/packages.txt
+wget https://$RAW_GITHUB_URL/linux/packages.txt -O packages.txt
 yay -S $(cat packages.txt)
 rm packages.txt
 
@@ -40,6 +40,9 @@ curl -sS https://$RAW_GITHUB_URL/.config/fish/config.fish > "$CONFIG_DIR"/fish/c
 curl -sS https://$RAW_GITHUB_URL/.config/btop/btop.conf > "$CONFIG_DIR"/btop/btop.conf
 curl -sS https://$RAW_GITHUB_URL/.config/alacritty/alacritty.toml > "$CONFIG_DIR"/alacritty/alacritty.toml
 
+FISH_PATH=$(which fish)
+sudo chsh -s "$FISH_PATH" "$USER"
+
 if [ "$USER" = "aelpxy" ]; then
     curl -sS https://$RAW_GITHUB_URL/.gitconfig > "$HOME"/.gitconfig
 else
@@ -55,13 +58,9 @@ case $yn in
         echo "Installing Rust and Bun..."
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
         curl -fsSL https://bun.sh/install | bash
-        FISH_PATH=$(which fish)
-        sudo chsh -s "$FISH_PATH" "$USER"
         sudo reboot
         ;;
     no)
-        FISH_PATH=$(which fish)
-        sudo chsh -s "$FISH_PATH" "$USER"
         sudo reboot
         ;;
     *)
