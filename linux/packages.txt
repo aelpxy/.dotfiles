@@ -38,3 +38,8 @@ navi
 tmux
 teleport-client-bin
 ffmpeg
+xclip
+polybar
+nitrogen
+rofi
+
