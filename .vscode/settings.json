@@ -1,16 +1,22 @@
 {
   "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
   "explorer.autoReveal": true,
+  "workbench.startupEditor": "none",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Vitesse Dark",
+  "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
   "editor.fontLigatures": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.suggest.preview": true,
   "editor.renderControlCharacters": true,
+  "editor.fontSize": 16,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontSize": 18,
   "editor.inlineSuggest.enabled": true,
-  "workbench.startupEditor": "none",
   "editor.smoothScrolling": true,
   "editor.acceptSuggestionOnEnter": "on",
   "editor.autoClosingBrackets": "always",
@@ -56,6 +62,7 @@
       }
     ]
   },
+  "git.openRepositoryInParentFolders": "always",
   "gopls": {
     "ui.semanticTokens": true
   },
@@ -70,12 +77,6 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
-  "workbench.editor.empty.hint": "hidden",
-  "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Vitesse Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 1,
-  "git.openRepositoryInParentFolders": "always",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -102,6 +103,5 @@
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "prisma.showPrismaDataPlatformNotification": false
+  }
 }
