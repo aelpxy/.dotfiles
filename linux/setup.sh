@@ -50,6 +50,7 @@ else
 fi
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
+curl -f https://zed.dev/install.sh | sh
 
 read -p "Do you want to install Rust and Bun? (yes/no) " yn
 
@@ -58,9 +59,13 @@ case $yn in
         echo "Installing Rust and Bun..."
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
         curl -fsSL https://bun.sh/install | bash
+	echo "Sleeping for five seconds then rebooting..."
+	sleep 5
         sudo reboot
         ;;
     no)
+	echo "Sleeping for five seconds then rebooting..."
+	sleep 5
         sudo reboot
         ;;
     *)
