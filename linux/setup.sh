@@ -8,7 +8,7 @@ if [ "$USER" != "aelpxy" ]; then
     echo "WARNING: DO NOT RUN THE SCRIPT IF YOU DON'T TRUST ME."
 fi
 
-read -p "This script was created by aelpxy and will not take any security measures. Are you sure you want to proceed? (yes/no) " agree
+read -p "Are you sure you want to proceed? (yes/no) " agree
 
 if [ "$agree" != "yes" ]; then
     echo "Exiting as $USER did not confirm"
@@ -21,6 +21,8 @@ git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
 makepkg -si
 
+cd .. && rm -rf yay-bin
+
 wget https://$RAW_GITHUB_URL/linux/packages.txt -O packages.txt
 yay -S $(cat packages.txt)
 rm packages.txt
@@ -30,8 +32,8 @@ curl -sS https://$RAW_GITHUB_URL/.config/starship.toml > ~/.config/starship.toml
 
 mkdir -p ~/.fonts/JetBrainsMono
 cd ~/.fonts/JetBrainsMono && wget $FONT_URL -O font.zip && unzip font.zip
-fc-cache -v
 rm -rf font.zip
+fc-cache -v
 
 mkdir -p "$CONFIG_DIR"/alacritty "$CONFIG_DIR"/neofetch "$CONFIG_DIR"/btop "$CONFIG_DIR"/fish
 
@@ -46,19 +48,20 @@ sudo chsh -s "$FISH_PATH" "$USER"
 if [ "$USER" = "aelpxy" ]; then
     curl -sS https://$RAW_GITHUB_URL/.gitconfig > "$HOME"/.gitconfig
 else
-    echo "Skipping .gitconfig download as the current user is not aelpxy."
+    echo "Skipping .gitconfig download as the $USER is not aelpxy."
 fi
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
-curl -f https://zed.dev/install.sh | sh
 
 read -p "Do you want to install Rust and Bun? (yes/no) " yn
 
 case $yn in
     yes)
         echo "Installing Rust and Bun..."
+
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
         curl -fsSL https://bun.sh/install | bash
+
 	echo "Sleeping for five seconds then rebooting..."
 	sleep 5
         sudo reboot

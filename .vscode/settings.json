@@ -1,12 +1,11 @@
 {
+  "explorer.autoReveal": true,
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
-  "explorer.autoReveal": true,
+  "workbench.colorTheme": "Vitesse Dark",
   "workbench.startupEditor": "none",
   "workbench.editor.empty.hint": "hidden",
-  "workbench.sideBar.location": "right",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Vitesse Dark",
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
   "editor.fontLigatures": true,
@@ -14,7 +13,9 @@
   "editor.guides.bracketPairs": true,
   "editor.suggest.preview": true,
   "editor.renderControlCharacters": true,
-  "editor.fontSize": 16,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.renderCharacters": false,
+  "editor.fontSize": 15.8,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.inlineSuggest.enabled": true,
   "editor.smoothScrolling": true,
@@ -24,6 +25,11 @@
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.formatOnSave": true,
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
+  },
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -62,21 +68,10 @@
       }
     ]
   },
-  "git.openRepositoryInParentFolders": "always",
   "gopls": {
     "ui.semanticTokens": true
   },
   "go.toolsManagement.autoUpdate": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.format.enable": true,
-  "typescript.format.insertSpaceAfterConstructor": true,
-  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
-  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
-  "markdown.preview.scrollEditorWithPreview": true,
-  "markdown.preview.scrollPreviewWithEditor": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -98,10 +93,18 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
-  }
+  },
+  "typescript.format.enable": true,
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "git.openRepositoryInParentFolders": "always"
 }
