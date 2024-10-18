@@ -23,6 +23,7 @@ alias sl="yay -Qs"
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
+alias tree='ls --tree --color=always'
 
 alias cls="clear"
 alias e="exit"
@@ -41,12 +42,24 @@ alias clock="timedatectl"
 alias wgon='sudo wg-quick up'
 alias wgoff='sudo wg-quick down'
 
-function weather
-    command curl -s https://wttr.in/$argv
-end
-
 function investigate
    find ~/ -iname "*$argv*" -type f -print
+end
+
+function cheat
+    if test (count $argv) -eq 0
+        echo "Usage: cheat <topic>"
+        return 1
+    end
+    curl -s "https://cheat.sh/$argv[1]" || echo "could not fetch cheatsheet for '$argv[1]'."
+end
+
+function weather
+    if test (count $argv) -eq 0
+        echo "Usage: weather <city>"
+        return 1
+    end
+    curl -s "wttr.in/$argv[1]?format=3"
 end
 
 function clean_cache
@@ -61,10 +74,8 @@ function clean_cache
 end
 
 set -x GPG_TTY (tty)
-
 set -x PATH $PATH:/usr/local/go/bin
 set -x GOPATH $HOME/.go
-
 set -x TERM "xterm-256color"
 set -x EDITOR "nano"
 

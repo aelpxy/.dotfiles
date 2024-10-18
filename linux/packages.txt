@@ -1,6 +1,7 @@
-chromium
+firefox
 seahorse
 alacritty
+wezterm
 visual-studio-code-bin
 obs-studio
 spotify
@@ -25,17 +26,9 @@ jq
 tokei
 whois
 starship
-sttr-bin
 nmap
 netcat
 zoxide
-bat
-broot
-duf
-gping
-dog
-navi
 tmux
-teleport-client-bin
 ffmpeg
 xclip

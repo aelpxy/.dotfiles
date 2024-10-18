@@ -35,11 +35,12 @@ cd ~/.fonts/JetBrainsMono && wget $FONT_URL -O font.zip && unzip font.zip
 rm -rf font.zip
 fc-cache -v
 
-mkdir -p "$CONFIG_DIR"/alacritty "$CONFIG_DIR"/neofetch "$CONFIG_DIR"/btop "$CONFIG_DIR"/fish
+mkdir -p "$CONFIG_DIR"/alacritty "$CONFIG_DIR"/neofetch "$CONFIG_DIR"/btop "$CONFIG_DIR"/fish "$CONFIG_DIR"/wezterm
 
 curl -sS https://$RAW_GITHUB_URL/.config/neofetch/config.conf > "$CONFIG_DIR"/neofetch/config.conf
 curl -sS https://$RAW_GITHUB_URL/.config/fish/config.fish > "$CONFIG_DIR"/fish/config.fish
 curl -sS https://$RAW_GITHUB_URL/.config/btop/btop.conf > "$CONFIG_DIR"/btop/btop.conf
+curl -sS https://$RAW_GITHUB_URL/.config/wezterm/wezterm.lua > "$CONFIG_DIR"/wezterm/wezterm.lua
 curl -sS https://$RAW_GITHUB_URL/.config/alacritty/alacritty.toml > "$CONFIG_DIR"/alacritty/alacritty.toml
 
 FISH_PATH=$(which fish)
@@ -53,13 +54,14 @@ fi
 
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-read -p "Do you want to install Rust and Bun? (yes/no) " yn
+read -p "Do you want to install Deno, Bun and Rust? (yes/no) " yn
 
 case $yn in
     yes)
-        echo "Installing Rust and Bun..."
+        echo "Installing extra packages..."
 
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        curl -fsSL https://deno.land/install.sh | sh
         curl -fsSL https://bun.sh/install | bash
 
 	echo "Sleeping for five seconds then rebooting..."

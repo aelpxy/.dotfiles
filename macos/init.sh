@@ -2,7 +2,7 @@
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew install neofetch fish lsd wget curl jq nodejs tree tokei starship btop
+brew install fish lsd wget jq nodejs starship btop
 
 # Setup starship prompt
 mkdir -p ~/.config && touch ~/.config/starship.toml
