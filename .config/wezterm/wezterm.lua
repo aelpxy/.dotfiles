@@ -4,6 +4,8 @@ return {
   font = wezterm.font 'JetBrains Mono',
   font_size = 20,
   window_background_opacity = 0.7,
+  -- Linux does not have a standardized way of doing blurs
+  -- Depends on the desktop environment
   macos_window_background_blur = 40,
   hide_tab_bar_if_only_one_tab = true,
   enable_scroll_bar = true,

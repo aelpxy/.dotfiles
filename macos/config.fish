@@ -8,10 +8,12 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
 alias work="cd ~/Workspace"
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
