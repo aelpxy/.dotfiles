@@ -1,12 +1,16 @@
-firefox
-seahorse
 alacritty
 wezterm
 visual-studio-code-bin
+postman-bin
+zen-browser-bin
+podman-desktop-bin
 obs-studio
+zed
+podman
 spotify
 discord
 flameshot
+chromium
 
 neofetch
 neovim
