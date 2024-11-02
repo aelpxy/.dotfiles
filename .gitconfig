@@ -1,6 +1,6 @@
 [user]
         signingkey = 1CF0409450268AF3
         email = aelpxy@protonmail.com
-        name = Aelpxy
+        name = aelpxy
 [commit]
         gpgsign = true

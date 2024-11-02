@@ -4,6 +4,7 @@ visual-studio-code-bin
 postman-bin
 zen-browser-bin
 podman-desktop-bin
+docker-buildx
 obs-studio
 zed
 podman
@@ -11,6 +12,8 @@ spotify
 discord
 flameshot
 chromium
+docker
+docker-compose
 
 neofetch
 neovim
@@ -19,7 +22,7 @@ lsd
 wget
 curl
 noto-fonts-emoji
-nodejs
+nodejs-lts-iron
 btop
 go
 fzf

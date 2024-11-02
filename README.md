@@ -2,14 +2,10 @@
 
 # Setup
 
-## Linux
-
 ```sh
-curl -sfL https://raw.githubusercontent.com/aelpxy/.dotfiles/main/linux/setup.sh | sh
+curl -sfL https://raw.githubusercontent.com/aelpxy/.dotfiles/main/scripts/setup.sh | sh
 ```
 
-## MacOS
-wip
-
 # License
+
 [MIT](./LICENSE)

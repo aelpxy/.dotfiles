@@ -1,0 +1,33 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "aaron-bond.better-comments",
+    "biomejs.biome",
+    "oven.bun-vscode",
+    "streetsidesoftware.code-spell-checker",
+    "cweijan.vscode-database-client2",
+    "cweijan.dbclient-jdbc",
+    "denoland.vscode-deno",
+    "ms-azuretools.vscode-docker",
+    "mikestead.dotenv",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "github.vscode-github-actions",
+    "golang.go",
+    "visualstudioexptteam.vscodeintellicode",
+    "visualstudioexptteam.intellicode-api-usage-examples",
+    "pkief.material-icon-theme",
+    "unifiedjs.vscode-mdx",
+    "oxc.oxc-vscode",
+    "postman.postman-for-vscode",
+    "esbenp.prettier-vscode",
+    "yoavbls.pretty-ts-errors",
+    "prisma.prisma",
+    "bradlc.vscode-tailwindcss",
+    "gruntfuggly.todo-tree",
+    "antfu.unocss",
+    "antfu.theme-vitesse",
+    "pulumi.pulumi-vscode-tools",
+    "pulumi.pulumi-lsp-client"
+  ]
+}
