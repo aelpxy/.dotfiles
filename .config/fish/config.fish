@@ -9,10 +9,12 @@ alias ....="z ../../.."
 alias .....="z ../../../.."
 alias work="z ~/Workspace"
 
+# grep
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+# upgrades
 alias upgrade="yay -Syyu"
 alias update="yay -Syy"
 alias install="yay -S"
@@ -20,6 +22,7 @@ alias uninstall="yay -Rnscd"
 alias search="yay -Ss"
 alias sl="yay -Qs"
 
+# colors
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'

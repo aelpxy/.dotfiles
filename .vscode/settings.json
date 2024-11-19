@@ -1,11 +1,10 @@
 {
   "explorer.autoReveal": true,
-  "window.titleBarStyle": "custom",
-  "window.zoomLevel": 1.1,
   "workbench.startupEditor": "none",
   "workbench.editor.empty.hint": "hidden",
   "workbench.sideBar.location": "left",
-  "workbench.iconTheme": "material-icon-theme",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1.1,
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
   "editor.fontLigatures": true,
@@ -16,7 +15,7 @@
   "editor.renderWhitespace": "none",
   "editor.minimap.renderCharacters": false,
   "editor.fontSize": 16,
-  "editor.lineHeight": 1.46,
+  "editor.lineHeight": 1.7,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.inlineSuggest.enabled": true,
   "editor.smoothScrolling": true,
@@ -115,5 +114,7 @@
   "files.associations": {
     ".env*": "dotenv"
   },
+  "database-client.autoSync": true,
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Vitesse Dark"
 }

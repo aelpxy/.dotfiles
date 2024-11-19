@@ -13,12 +13,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
 alias work="cd ~/Workspace"
+
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
 alias tree='ls --tree --color=always'
+
 alias cls="clear"
 alias install="brew install"
 alias uninstall="brew uninstall"

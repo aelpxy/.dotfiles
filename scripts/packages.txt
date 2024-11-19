@@ -1,9 +1,7 @@
 alacritty
-wezterm
 visual-studio-code-bin
 postman-bin
 zen-browser-bin
-podman-desktop-bin
 docker-buildx
 obs-studio
 zed
@@ -23,6 +21,7 @@ wget
 curl
 noto-fonts-emoji
 nodejs-lts-iron
+teleport-client-bin
 btop
 go
 fzf
