@@ -1,0 +1,9 @@
+bat		fzf		libevent	libssh2		lsd		node@22		pnpm		wget
+brotli		gettext		libgcrypt	libtasn1	luajit		npth		readline	yazi
+btop		gmp		libgit2		libunistring	luv		oniguruma	starship
+c-ares		gnupg		libgpg-error	libusb		msgpack		openssl@3	tokei
+ca-certificates	gnutls		libidn2		libuv		ncurses		p11-kit		tree-sitter
+fastfetch	icu4c@76	libksba		libvterm	neovim		pcre2		unbound
+fish		libassuan	libnghttp2	lpeg		nettle		pinentry	unibilium
+
+font-jetbrains-mono-nerd-font	kitty

@@ -1,5 +1,7 @@
 # .dotfiles
 
+My primary work machine is now a MacBook, so I no longer maintain my Linux dotfiles.
+
 # Setup
 
 ```sh

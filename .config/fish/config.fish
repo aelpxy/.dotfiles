@@ -2,11 +2,16 @@ if status is-interactive
     set -g fish_greeting
 end
 
+# set brew eval
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # aliases
 alias ..="z .."
 alias ...="z ../.."
 alias ....="z ../../.."
 alias .....="z ../../../.."
+
+# workspace
 alias work="z ~/Workspace"
 
 # grep
@@ -15,19 +20,19 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # upgrades
-alias upgrade="yay -Syyu"
-alias update="yay -Syy"
-alias install="yay -S"
-alias uninstall="yay -Rnscd"
-alias search="yay -Ss"
-alias sl="yay -Qs"
+alias upgrade="brew upgrade"
+alias update="brew upgrade"
+alias install="brew install"
+alias uninstall="brew uninstall"
+alias search="brew search"
 
-# colors
+# ls but with colors
 alias ls='lsd -al --color=always'
 alias la='lsd -a --color=always'
 alias ll='lsd -l --color=always'
-alias tree='ls --tree --color=always'
+alias tree='lsd --tree --color=always'
 
+# helpers
 alias cls="clear"
 alias e="exit"
 alias q="exit"
@@ -40,10 +45,6 @@ alias reload="source ~/.config/fish/config.fish"
 alias cc='clean_cache'
 alias npm="pnpm"
 alias header="curl -I"
-alias clock="timedatectl"
-
-alias wgon='sudo wg-quick up'
-alias wgoff='sudo wg-quick down'
 
 function investigate
    find ~/ -iname "*$argv*" -type f -print
@@ -69,24 +70,26 @@ function clean_cache
     rm -rf ~/.xsession-errors.old
     rm -rf ~/.xsession-errors
     rm -rf ~/.wget-hsts
-    sudo journalctl --rotate
-    sudo journalctl --vacuum-time=1s
-    yay -Scc --noconfirm
+    brew autoremove
+    brew cleanup --prune=all
     pnpm store prune
     history clear
 end
 
 set -x GPG_TTY (tty)
-set -x PATH $PATH:/usr/local/go/bin
-set -x GOPATH $HOME/.go
-set -x TERM "xterm-256color"
-set -x EDITOR "nano"
+set -x TERM xterm-256color
+set -x EDITOR nvim
+set -x FZF_DEFAULT_OPTS "\
+--color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+--color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
+--color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
+--color=selected-bg:#45475a \
+--multi"
 
-set -gx PNPM_HOME "/home/$USER/.local/share/pnpm"
+set -gx PATH $PATH /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
+fish_add_path /opt/homebrew/opt/node@22/bin
 
 zoxide init fish | source
 starship init fish | source

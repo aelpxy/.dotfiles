@@ -115,6 +115,6 @@
     ".env*": "dotenv"
   },
   "database-client.autoSync": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Vitesse Dark"
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.colorTheme": "Catppuccin Mocha"
 }
