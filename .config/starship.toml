@@ -15,7 +15,6 @@ truncation_length = 4
 style = "bold lavender"
 
 # Palette definition
-
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
 flamingo = "#f2cdcd"

@@ -1,10 +1,13 @@
 {
   "explorer.autoReveal": true,
-  "workbench.startupEditor": "none",
-  "workbench.editor.empty.hint": "hidden",
-  "workbench.sideBar.location": "left",
   "window.titleBarStyle": "custom",
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Vesper",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.sideBar.location": "top",
   "window.zoomLevel": 1.1,
+  "editor.inlayHints.enabled": "on",
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
   "editor.fontLigatures": true,
@@ -14,8 +17,8 @@
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "none",
   "editor.minimap.renderCharacters": false,
-  "editor.fontSize": 16,
-  "editor.lineHeight": 1.7,
+  "editor.fontSize": 15.5,
+  "editor.lineHeight": 1.6,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.inlineSuggest.enabled": true,
   "editor.smoothScrolling": true,
@@ -64,16 +67,9 @@
         "settings": {
           "fontStyle": "italic"
         }
-      },
-      {
-        "scope": "keyword.other.dotenv",
-        "settings": {
-          "foreground": "#FF000000"
-        }
       }
     ]
   },
-  "git.openRepositoryInParentFolders": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.format.enable": true,
@@ -82,13 +78,18 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
   "[typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -106,15 +107,45 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
+  },
+  "[md]": {
+    "editor.defaultFormatter": "unifiedjs.vscode-mdx"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
   "files.associations": {
-    ".env*": "dotenv"
+    ".env*": "dotenv",
+    "*.css": "tailwindcss"
   },
-  "database-client.autoSync": true,
-  "workbench.iconTheme": "catppuccin-mocha",
-  "workbench.colorTheme": "Catppuccin Mocha"
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"
+  },
+  "editor.suggest.insertMode": "replace",
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "*.deprecated": {
+        "strikethrough": true
+      }
+    }
+  },
+  "zig.zls.enabled": "on",
+  "debug.javascript.autoAttachFilter": "disabled",
+  "dotenv.enableAutocloaking": false,
+  "git.openRepositoryInParentFolders": "always"
 }
