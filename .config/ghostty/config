@@ -1,7 +1,5 @@
 font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 18
-
-theme = catppuccin-mocha
+font-size = 14
 
 background-opacity = 0.8
 background-blur-radius = 20

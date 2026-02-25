@@ -1,0 +1,47 @@
+{
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Dark",
+    "dark": "Ayu Dark",
+  },
+  "ssh_connections": [],
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "ui_font_family": "IBM Plex Sans",
+  "ui_font_size": 20,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 18,
+  "autosave": "on_focus_change",
+  "format_on_save": "off",
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 16
+  },
+  "tab_size": 2,
+  "title_bar": {
+    "show_sign_in": false,
+    "show_menus": false,
+    "show_branch_icon": true,
+  },
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": true,
+  },
+  "status_bar": {
+    "active_encoding_button": "enabled"
+  },
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "project_panel": {
+    "dock": "right",
+    "default_width": 240,
+    "sort_mode": "directories_first",
+    "auto_open": {
+      "on_create": true,
+    }
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+}
