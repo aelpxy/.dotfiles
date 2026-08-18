@@ -1,13 +1,16 @@
+# ---------- Environment (all shells) ----------
 set -gx GPG_TTY (tty)
 set -gx EDITOR "zed --wait"
 set -gx VISUAL "zed --wait"
 
 set -gx GOPATH $HOME/.go
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+set -gx BUN_INSTALL "$HOME/.bun"
 
 fish_add_path $HOME/.local/bin
 fish_add_path $GOPATH/bin
-fish_add_path $PNPM_HOME
+fish_add_path $PNPM_HOME/bin
+fish_add_path $BUN_INSTALL/bin
 
 # ---------- Interactive only ----------
 if status is-interactive

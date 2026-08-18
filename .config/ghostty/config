@@ -1,11 +1,14 @@
+# ---------- Theme ----------
 theme = Kurokula
 
+# ---------- Font ----------
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 12
 font-feature = calt
 font-feature = liga
 adjust-cell-height = 12%
 
+# ---------- Window ----------
 window-decoration = server
 gtk-titlebar = true
 gtk-tabs-location = top
@@ -18,11 +21,13 @@ background-opacity = 0.96
 background-blur-radius = 20
 unfocused-split-opacity = 0.85
 
+# ---------- Cursor ----------
 cursor-style = bar
 cursor-style-blink = true
 cursor-opacity = 0.85
 mouse-hide-while-typing = true
 
+# ---------- Behaviour ----------
 scrollback-limit = 10000000
 copy-on-select = clipboard
 confirm-close-surface = true
@@ -30,6 +35,7 @@ shell-integration = fish
 shell-integration-features = cursor,sudo,title
 window-save-state = always
 
+# ---------- Keybinds ----------
 keybind = ctrl+shift+t=new_tab
 keybind = ctrl+shift+w=close_surface
 keybind = ctrl+shift+n=new_window
