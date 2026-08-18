@@ -1,6 +1,74 @@
 [user]
-        signingkey = 1CF0409450268AF3
-        email = aelpxy@protonmail.com
-        name = aelpxy
+	name = aelpxy
+	email = aelpxy@protonmail.com
+	signingkey = A03099A6D5E1019739CF3EBA4A399FA6B324BA51
+
 [commit]
-        gpgsign = true
+	gpgsign = true
+	verbose = true
+
+[tag]
+	gpgsign = true
+
+[gpg]
+	program = gpg
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = zed --wait
+	autocrlf = input
+	pager = less -FRX
+
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
+[rebase]
+	autoStash = true
+	autoSquash = true
+	updateRefs = true
+
+[merge]
+	conflictstyle = zdiff3
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
+
+[help]
+	autocorrect = prompt
+
+[color]
+	ui = auto
+
+[alias]
+	s = status --short --branch
+	lg = log --oneline --graph --decorate --all
+	last = log -1 --stat
+	unstage = restore --staged
+	amend = commit --amend --no-edit
+	undo = reset --soft HEAD~1
+	pushf = push --force-with-lease

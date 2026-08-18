@@ -1,10 +1,43 @@
-font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 14
+theme = Kurokula
 
-background-opacity = 0.8
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 12
+font-feature = calt
+font-feature = liga
+adjust-cell-height = 12%
+
+window-decoration = server
+gtk-titlebar = true
+gtk-tabs-location = top
+gtk-wide-tabs = false
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+window-inherit-working-directory = true
+background-opacity = 0.96
 background-blur-radius = 20
+unfocused-split-opacity = 0.85
 
-window-padding-x = 5
-window-padding-y = 5
+cursor-style = bar
+cursor-style-blink = true
+cursor-opacity = 0.85
+mouse-hide-while-typing = true
 
-clipboard-write = allow
+scrollback-limit = 10000000
+copy-on-select = clipboard
+confirm-close-surface = true
+shell-integration = fish
+shell-integration-features = cursor,sudo,title
+window-save-state = always
+
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_surface
+keybind = ctrl+shift+n=new_window
+keybind = ctrl+shift+e=new_split:right
+keybind = ctrl+shift+o=new_split:down
+keybind = ctrl+shift+f=toggle_split_zoom
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+page_down=next_tab
+keybind = ctrl+page_up=previous_tab
+keybind = ctrl+0=reset_font_size

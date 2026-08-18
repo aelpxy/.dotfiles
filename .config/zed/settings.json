@@ -1,47 +1,60 @@
 {
   "theme": {
     "mode": "system",
-    "light": "Ayu Dark",
-    "dark": "Ayu Dark",
+    "light": "Zedokai Darker (Filter Spectrum)",
+    "dark": "Zedokai Darker (Filter Spectrum)",
   },
-  "ssh_connections": [],
-  "session": {
-    "trust_all_worktrees": true,
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)",
   },
-  "ui_font_family": "IBM Plex Sans",
-  "ui_font_size": 20,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 18,
-  "autosave": "on_focus_change",
-  "format_on_save": "off",
-  "terminal": {
-    "font_family": "JetBrainsMono Nerd Font",
-    "font_size": 16
-  },
-  "tab_size": 2,
-  "title_bar": {
-    "show_sign_in": false,
-    "show_menus": false,
-    "show_branch_icon": true,
-  },
-  "tab_bar": {
-    "show_pinned_tabs_in_separate_row": true,
-  },
-  "status_bar": {
-    "active_encoding_button": "enabled"
-  },
-  "sticky_scroll": {
-    "enabled": true
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 16,
+  "ui_font_size": 16,
+  "show_whitespaces": "all",
+  "base_keymap": "VSCode",
+  "vim_mode": false,
+  "format_on_save": "on",
+  "ensure_final_newline_on_save": true,
+  "remove_trailing_whitespace_on_save": true,
+  "cli_default_open_behavior": "existing_window",
+  "disable_ai": true,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
   },
   "project_panel": {
-    "dock": "right",
-    "default_width": 240,
-    "sort_mode": "directories_first",
-    "auto_open": {
-      "on_create": true,
-    }
+    "dock": "left",
+    "git_status_indicator": true,
+    "show_diagnostics": "errors",
+    "diagnostic_badges": false,
+  },
+  "outline_panel": {
+    "dock": "left",
   },
   "collaboration_panel": {
     "button": false,
+    "dock": "left",
   },
+  "git_panel": {
+    "dock": "left",
+    "file_icons": true,
+    "tree_view": false,
+  },
+  "title_bar": {
+    "show_branch_status_icon": true,
+  },
+  "status_bar": {
+    "line_endings_button": false,
+  },
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "accessible_mode": true,
 }

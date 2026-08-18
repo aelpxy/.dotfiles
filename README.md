@@ -1,6 +1,6 @@
 # .dotfiles
 
-TODO.
+A collection of config files.
 
 # License
 
