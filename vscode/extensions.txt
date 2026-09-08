@@ -1,0 +1,8 @@
+anthropic.claude-code
+bradlc.vscode-tailwindcss
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ms-vscode-remote.remote-wsl
+ms-vscode.cpptools
+platformio.platformio-ide
+prisma.prisma
