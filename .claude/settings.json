@@ -1,0 +1,14 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
+  "disableRemoteControl": true,
+  "enableArtifact": false,
+  "theme": "dark",
+  "remoteControlAtStartup": false,
+  "autoUploadSessions": false,
+  "inputNeededNotifEnabled": false,
+  "agentPushNotifEnabled": false
+}

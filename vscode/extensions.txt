@@ -2,7 +2,9 @@ anthropic.claude-code
 bradlc.vscode-tailwindcss
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
+golang.go
 ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
+openai.chatgpt
 platformio.platformio-ide
 prisma.prisma
