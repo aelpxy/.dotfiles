@@ -19,10 +19,9 @@ PACKAGES=(
   fish starship zoxide lsd fzf ripgrep fd bat
   go rustup pnpm
   btop fastfetch jq wget zip unzip
-  ttf-jetbrains-mono-nerd
 )
 
-GUI_PACKAGES=(ghostty alacritty zed discord spotify-launcher flameshot mpv)
+GUI_PACKAGES=(ghostty alacritty zed discord spotify-launcher flameshot mpv ttf-jetbrains-mono-nerd)
 
 GUI_AUR_PACKAGES=(helium-browser-bin visual-studio-code-bin 1password)
 
