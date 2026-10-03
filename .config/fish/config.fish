@@ -33,7 +33,11 @@ if status is-interactive
     # Misc
     alias reload="exec fish"
 
+    function starship_transient_prompt_func
+        starship module character
+    end
     starship init fish | source
+    enable_transience
     zoxide init fish --cmd cd | source
 end
 
