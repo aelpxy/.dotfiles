@@ -1,0 +1,10 @@
+.gitconfig
+.ssh/config
+.gnupg/gpg-agent.conf
+.config/fish/config.fish
+.config/starship.toml
+.config/ghostty/config
+.config/zed/settings.json
+.claude/CLAUDE.md
+.claude/settings.json
+.codex/AGENTS.md

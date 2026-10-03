@@ -5,6 +5,11 @@ if [ "$(uname -s)" != "Linux" ]; then
   exit 1
 fi
 
+if [ "$(id -u)" -eq 0 ]; then
+  echo "run this as your user, not root" >&2
+  exit 1
+fi
+
 set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "$0")/.." && pwd)"
@@ -23,18 +28,10 @@ GUI_AUR_PACKAGES=(helium-browser-bin visual-studio-code-bin 1password)
 
 AUR_PACKAGES=(bun-bin)
 
-FILES=(
-  .gitconfig
-  .ssh/config
-  .gnupg/gpg-agent.conf
-  .config/fish/config.fish
-  .config/starship.toml
-  .config/ghostty/config
-  .config/zed/settings.json
-  .claude/CLAUDE.md
-  .claude/settings.json
-  .codex/AGENTS.md
-)
+FILES=()
+while IFS= read -r file; do
+  FILES+=("$file")
+done < "$DOTFILES/scripts/files.txt"
 
 is_wsl() {
   grep -qi microsoft /proc/version
@@ -58,6 +55,15 @@ copy() {
   echo "copied ~/${2:-$1}"
 }
 
+if has_gui; then
+  read -rp "install google chrome? [y/N] " want_chrome
+  read -rp "install ungoogled chromium? [y/N] " want_chromium
+fi
+
+sudo -v
+# keep sudo alive so long builds don't stop for the password again
+while kill -0 "$$" 2>/dev/null; do sudo -n true; sleep 60; done 2>/dev/null &
+
 echo "==> packages"
 sudo pacman -Syu --noconfirm
 # lts codenames are alphabetical, so the last one is the newest
@@ -78,13 +84,10 @@ if has_gui; then
   sudo pacman -S --needed --noconfirm "${GUI_PACKAGES[@]}"
   paru -S --needed --noconfirm "${GUI_AUR_PACKAGES[@]}"
 
-  read -rp "install google chrome? [y/N] " answer
-  if [ "$answer" = "y" ]; then
+  if [ "$want_chrome" = "y" ]; then
     paru -S --needed --noconfirm google-chrome
   fi
-
-  read -rp "install ungoogled chromium? [y/N] " answer
-  if [ "$answer" = "y" ]; then
+  if [ "$want_chromium" = "y" ]; then
     paru -S --needed --noconfirm ungoogled-chromium-bin
   fi
 fi

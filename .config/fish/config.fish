@@ -1,7 +1,6 @@
 # ~/.config/fish/config.fish
 
 # ---------- Environment (all shells) ----------
-set -gx GPG_TTY (tty)
 set -gx EDITOR "zed --wait"
 set -gx VISUAL "zed --wait"
 
@@ -17,6 +16,7 @@ fish_add_path $BUN_INSTALL/bin
 # ---------- Interactive only ----------
 if status is-interactive
     set -g fish_greeting
+    set -gx GPG_TTY (tty)
 
     # Navigation
     alias ...="cd ../.."

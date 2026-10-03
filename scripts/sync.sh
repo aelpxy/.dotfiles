@@ -3,18 +3,11 @@ set -euo pipefail
 
 DOTFILES="$(cd "$(dirname "$0")/.." && pwd)"
 
-FILES=(
-  .gitconfig
-  .gnupg/gpg-agent.conf
-  .config/fish/config.fish
-  .config/starship.toml
-  .config/ghostty/config
-  .config/zed/settings.json
-  .claude/CLAUDE.md
-  .claude/settings.json
-  .codex/AGENTS.md
-  vscode/settings.json
-)
+FILES=()
+while IFS= read -r file; do
+  FILES+=("$file")
+done < "$DOTFILES/scripts/files.txt"
+FILES+=(vscode/settings.json)
 
 is_wsl() {
   grep -qi microsoft /proc/version 2>/dev/null
