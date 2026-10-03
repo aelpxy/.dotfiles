@@ -80,3 +80,26 @@ for file in "${FILES[@]}"; do
     esac
   done
 done
+
+if command -v code >/dev/null; then
+  list="$DOTFILES/vscode/extensions.txt"
+  installed="$(code --list-extensions </dev/null 2>/dev/null | tr -d '\r')"
+  # the wsl code cli doesn't list remote-wsl even though it's installed
+  if is_wsl; then
+    installed="$installed"$'\n'"ms-vscode-remote.remote-wsl"
+  fi
+  installed="$(sort -u <<<"$installed")"
+
+  if [ "$installed" = "$(cat "$list")" ]; then
+    echo "in sync vscode/extensions.txt"
+  else
+    echo
+    echo "vscode extensions changed"
+    diff -u --label "repo/vscode/extensions.txt" --label "device/extensions" "$list" - <<<"$installed" || true
+    read -rp "update extensions.txt from device? [y/N] " answer
+    if [ "$answer" = "y" ]; then
+      echo "$installed" > "$list"
+      echo "repo updated from device"
+    fi
+  fi
+fi
