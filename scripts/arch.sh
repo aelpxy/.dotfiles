@@ -18,14 +18,12 @@ PACKAGES=(
   base-devel git github-cli openssh gnupg lsof
   fish starship zoxide lsd fzf ripgrep fd bat
   go rustup pnpm
-  btop fastfetch jq wget zip unzip
+  btop fastfetch jq wget zip unzip pciutils
 )
 
 GUI_PACKAGES=(ghostty alacritty zed discord spotify-launcher flameshot mpv ttf-jetbrains-mono-nerd)
 
 GUI_AUR_PACKAGES=(helium-browser-bin visual-studio-code-bin 1password)
-
-AUR_PACKAGES=(bun-bin)
 
 FILES=()
 while IFS= read -r file; do
@@ -38,6 +36,25 @@ is_wsl() {
 
 has_gui() {
   ! is_wsl && [ "$(systemctl get-default)" = graphical.target ]
+}
+
+steam_drivers() {
+  local gpus
+  gpus="$(lspci | grep -Ei 'vga|3d|display')"
+
+  if grep -q NVIDIA <<<"$gpus"; then
+    if pacman -Q nvidia-utils >/dev/null 2>&1; then
+      echo lib32-nvidia-utils
+    else
+      echo lib32-vulkan-nouveau
+    fi
+  fi
+  if grep -qE 'AMD|ATI' <<<"$gpus"; then
+    echo lib32-vulkan-radeon
+  fi
+  if grep -q Intel <<<"$gpus"; then
+    echo lib32-vulkan-intel
+  fi
 }
 
 copy() {
@@ -54,9 +71,11 @@ copy() {
   echo "copied ~/${2:-$1}"
 }
 
+read -rp "install bun? [y/N] " want_bun
 if has_gui; then
   read -rp "install google chrome? [y/N] " want_chrome
   read -rp "install ungoogled chromium? [y/N] " want_chromium
+  read -rp "install steam? [y/N] " want_steam
 fi
 
 sudo -v
@@ -64,6 +83,9 @@ sudo -v
 while kill -0 "$$" 2>/dev/null; do sudo -n true; sleep 60; done 2>/dev/null &
 
 echo "==> packages"
+if [ "${want_steam:-}" = "y" ] && ! grep -q '^\[multilib\]' /etc/pacman.conf; then
+  printf '\n[multilib]\nInclude = /etc/pacman.d/mirrorlist\n' | sudo tee -a /etc/pacman.conf >/dev/null
+fi
 sudo pacman -Syu --noconfirm
 # lts codenames are alphabetical, so the last one is the newest
 node_lts="$(pacman -Ssq '^nodejs-lts-' | sort | tail -n1)"
@@ -76,13 +98,19 @@ if ! command -v paru >/dev/null; then
   (cd "$tmp" && makepkg -si --noconfirm)
   rm -rf "$tmp"
 fi
-paru -S --needed --noconfirm "${AUR_PACKAGES[@]}"
+if [ "$want_bun" = "y" ]; then
+  paru -S --needed --noconfirm bun-bin
+fi
 
 if has_gui; then
   echo "==> gui apps"
   sudo pacman -S --needed --noconfirm "${GUI_PACKAGES[@]}"
   paru -S --needed --noconfirm "${GUI_AUR_PACKAGES[@]}"
 
+  if [ "$want_steam" = "y" ]; then
+    # pick the 32-bit vulkan driver for this gpu instead of letting pacman guess
+    sudo pacman -S --needed --noconfirm $(steam_drivers) steam
+  fi
   if [ "$want_chrome" = "y" ]; then
     paru -S --needed --noconfirm google-chrome
   fi
