@@ -23,6 +23,14 @@ Compares the configs in this repo with the ones on the current device. When a fi
 
 Tracked files are listed in `scripts/files.txt`. Private SSH hosts go in `~/.ssh/config.local`, which is never committed.
 
+## Mount a disk
+
+```sh
+./scripts/mount.sh
+```
+
+Lists partitions, asks which one to mount and where, then adds it to `/etc/fstab` by UUID so it mounts on every boot.
+
 ## License
 
 Licensed under [MIT](./LICENSE)
