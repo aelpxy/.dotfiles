@@ -6,6 +6,15 @@
   },
   "disableRemoteControl": true,
   "enableArtifact": false,
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  },
   "theme": "dark",
   "remoteControlAtStartup": false,
   "autoUploadSessions": false,

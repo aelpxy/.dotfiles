@@ -1,3 +1,5 @@
+# ~/.config/fish/config.fish
+
 # ---------- Environment (all shells) ----------
 set -gx GPG_TTY (tty)
 set -gx EDITOR "zed --wait"
@@ -32,7 +34,7 @@ if status is-interactive
     alias reload="exec fish"
 
     starship init fish | source
-    zoxide init fish | source
+    zoxide init fish --cmd cd | source
 end
 
 # ---------- Functions ----------
@@ -77,6 +79,15 @@ end
 function cleanup --description "Clear caches and stray dotfiles"
     rm -f ~/.xsession-errors ~/.xsession-errors.old ~/.wget-hsts
     command -q pnpm; and pnpm store prune
-    command -q dnf; and sudo dnf clean all
+    if command -q paru
+        paru -Sc --noconfirm
+    else if command -q pacman
+        sudo pacman -Sc --noconfirm
+    end
+    command -q brew; and brew cleanup
     echo "done"
+end
+
+if test -S "$XDG_RUNTIME_DIR/ssh-agent.socket"
+    set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 end
