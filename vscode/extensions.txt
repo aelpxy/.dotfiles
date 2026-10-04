@@ -10,6 +10,7 @@ ms-vscode.cpptools
 ms-vscode.hexeditor
 openai.chatgpt
 openai.codex-audio
+oxc.oxc-vscode
 platformio.platformio-ide
 prisma.prisma
 rust-lang.rust-analyzer
