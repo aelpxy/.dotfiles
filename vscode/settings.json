@@ -1,14 +1,38 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "window.zoomLevel": 1.5,
+    "window.zoomLevel": 1,
     "window.commandCenter": false,
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "window.density.layout": "compact",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "workbench.list.smoothScrolling": true,
+    "workbench.tree.indent": 16,
+    "workbench.experimental.modernUI": false,
     "chat.disableAIFeatures": true,
     "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
-    "editor.fontSize": 16,
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
+    "editor.fontSize": 15.5,
+    "editor.fontLigatures": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "editor.formatOnSave": true,
+    "editor.linkedEditing": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.semanticHighlighting.enabled": true,
     "js/ts.updateImportsOnFileMove.enabled": "always",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.mouseWheelScrollSensitivity": 3,
+    "terminal.integrated.initialHint": false,
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+    "terminal.integrated.smoothScrolling": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "remote.autoForwardPortsSource": "hybrid",
     "claudeCode.preferredLocation": "panel",
     "json.schemaDownload.trustedDomains": {
         "https://schemastore.azurewebsites.net/": true,
@@ -19,11 +43,26 @@
         "https://json-schema.org/": true,
         "https://developer.microsoft.com/json-schemas/": true
     },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[svelte]": {
         "editor.defaultFormatter": "svelte.svelte-vscode"
@@ -31,25 +70,7 @@
     "[mdx]": {
         "editor.defaultFormatter": "unifiedjs.vscode-mdx"
     },
-    "diffEditor.ignoreTrimWhitespace": false,
-    "terminal.integrated.mouseWheelScrollSensitivity": 3,
-    "terminal.integrated.initialHint": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "remote.autoForwardPortsSource": "hybrid",
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
-    "window.density.layout": "compact",
-    "editor.semanticHighlighting.enabled": true
+    }
 }
