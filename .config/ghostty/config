@@ -32,7 +32,7 @@ scrollback-limit = 10000000
 copy-on-select = clipboard
 confirm-close-surface = true
 shell-integration = fish
-shell-integration-features = cursor,sudo,title
+shell-integration-features = cursor,sudo,title,ssh-terminfo,ssh-env
 window-save-state = always
 
 # ---------- Keybinds ----------
