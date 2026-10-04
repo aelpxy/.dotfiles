@@ -83,7 +83,7 @@ done
 
 if command -v code >/dev/null; then
   list="$DOTFILES/vscode/extensions.txt"
-  installed="$(code --list-extensions </dev/null 2>/dev/null | tr -d '\r')"
+  installed="$(code --list-extensions </dev/null 2>/dev/null | tr -d '\r' | grep -E '^[A-Za-z0-9-]+\.[A-Za-z0-9.-]+$')"
   # the wsl code cli doesn't list remote-wsl even though it's installed
   if is_wsl; then
     installed="$installed"$'\n'"ms-vscode-remote.remote-wsl"
