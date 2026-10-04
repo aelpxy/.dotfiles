@@ -1,6 +1,10 @@
 # ~/.config/fish/config.fish
 
 # ---------- Environment (all shells) ----------
+if test -x /opt/homebrew/bin/brew
+    /opt/homebrew/bin/brew shellenv | source
+end
+
 set -gx EDITOR "zed --wait"
 set -gx VISUAL "zed --wait"
 
