@@ -81,6 +81,19 @@ function killport --description "Kill whatever is bound to a port"
     end
 end
 
+function unlock --description "Cache GPG signing key and SSH key passphrases"
+    set -l key (git config --global user.signingkey)
+    if test -n "$key"
+        echo unlock | gpg --clearsign -u $key >/dev/null; and echo "gpg unlocked"
+    end
+    set -l keys
+    for pub in ~/.ssh/*.pub
+        set -l priv (string replace -r '\.pub$' '' -- $pub)
+        test -f $priv; and set -a keys $priv
+    end
+    test -n "$keys"; and ssh-add $keys
+end
+
 function backup --description "Timestamped copy of a file"
     if test (count $argv) -eq 0
         echo "usage: backup <file>"
