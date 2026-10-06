@@ -9,7 +9,11 @@ set -gx EDITOR "zed --wait"
 set -gx VISUAL "zed --wait"
 
 set -gx GOPATH $HOME/.go
-set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+if test (uname) = Darwin
+    set -gx PNPM_HOME "$HOME/Library/pnpm"
+else
+    set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+end
 set -gx BUN_INSTALL "$HOME/.bun"
 
 fish_add_path $HOME/.local/bin
