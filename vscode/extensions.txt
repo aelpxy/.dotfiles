@@ -13,7 +13,6 @@ openai.codex-audio
 oxc.oxc-vscode
 platformio.platformio-ide
 prisma.prisma
-rust-lang.rust-analyzer
 svelte.svelte-vscode
 tamasfe.even-better-toml
 unifiedjs.vscode-mdx

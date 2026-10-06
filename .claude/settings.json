@@ -8,7 +8,6 @@
   "disableRemoteControl": true,
   "enableArtifact": false,
   "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true
   },
   "modelSettings": {
