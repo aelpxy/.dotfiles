@@ -17,7 +17,7 @@ DOTFILES="$(cd "$(dirname "$0")/.." && pwd)"
 PACKAGES=(
   base-devel git github-cli openssh gnupg lsof
   fish starship zoxide lsd fzf ripgrep fd bat
-  go rustup pnpm
+  go pnpm
   btop fastfetch jq wget zip unzip pciutils
 )
 
@@ -118,9 +118,6 @@ if has_gui; then
     paru -S --needed --noconfirm ungoogled-chromium-bin
   fi
 fi
-
-echo "==> rust"
-rustup default stable
 
 echo "==> pnpm"
 export PNPM_HOME="$HOME/.local/share/pnpm"

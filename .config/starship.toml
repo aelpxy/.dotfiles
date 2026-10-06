@@ -3,7 +3,7 @@
 add_newline = true
 
 format = """
-$username$hostname${custom.org}$directory$git_branch$git_state$git_status$nodejs$bun$golang$rust$python
+$username$hostname${custom.org}$directory$git_branch$git_state$git_status$nodejs$bun$golang$python
 $character"""
 
 [character]
@@ -72,11 +72,6 @@ style = "yellow"
 format = "[$symbol]($style)"
 symbol = " "
 style = "cyan"
-
-[rust]
-format = "[$symbol]($style)"
-symbol = "󱘗 "
-style = "red"
 
 [python]
 format = "[$symbol]($style)"
