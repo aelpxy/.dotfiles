@@ -4,6 +4,7 @@
     "pr": "",
     "sessionUrl": false
   },
+  "model": "opus",
   "disableRemoteControl": true,
   "enableArtifact": false,
   "enabledPlugins": {
