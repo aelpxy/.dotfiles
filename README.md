@@ -8,10 +8,21 @@ A collection of my config files.
 sudo pacman -S --needed git
 git clone https://github.com/aelpxy/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./scripts/arch.sh
+./scripts/arch_setup.sh
 ```
 
 Installs packages, AUR helper, dev tools and GUI apps (on desktop systems), then copies the configs into place. Existing files that differ are saved as `<name>.bak`.
+
+## Setup (Fedora)
+
+```sh
+sudo dnf install -y git
+git clone https://github.com/aelpxy/.dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./scripts/fedora_setup.sh
+```
+
+Same as the Arch setup, using dnf, vendor repos and Flathub instead of pacman and the AUR.
 
 ## Sync
 
