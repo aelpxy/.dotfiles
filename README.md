@@ -32,7 +32,7 @@ Same as the Arch setup, using dnf, vendor repos and Flathub instead of pacman an
 
 Compares the configs in this repo with the ones on the current device. When a file differs it shows the diff and asks whether to keep the repo or device version, or skip it.
 
-Tracked files are listed in `scripts/files.txt`. Private SSH hosts go in `~/.ssh/config.local`, which is never committed.
+Tracked files are listed in `scripts/files.txt`. Private SSH hosts go in `~/.ssh/config.local` and the GPG signing key in `~/.gitconfig.local` (`[user] signingkey = <id>`), which are never committed.
 
 ## Mount a disk
 

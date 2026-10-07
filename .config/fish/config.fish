@@ -82,7 +82,7 @@ function killport --description "Kill whatever is bound to a port"
 end
 
 function unlock --description "Cache GPG signing key and SSH key passphrases"
-    set -l key (git config --global user.signingkey)
+    set -l key (git config --global --includes user.signingkey)
     if test -n "$key"
         echo unlock | gpg --clearsign -u $key >/dev/null; and echo "gpg unlocked"
     end

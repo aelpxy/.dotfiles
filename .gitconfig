@@ -1,7 +1,6 @@
 [user]
 	name = aelpxy
 	email = git@aelpxy.dev
-	signingkey = A03099A6D5E1019739CF3EBA4A399FA6B324BA51
 
 [commit]
 	gpgsign = true
@@ -72,3 +71,6 @@
 	amend = commit --amend --no-edit
 	undo = reset --soft HEAD~1
 	pushf = push --force-with-lease
+
+[include]
+	path = ~/.gitconfig.local
