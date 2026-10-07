@@ -75,7 +75,7 @@ for file in "${FILES[@]}"; do
     read -rp "keep [r]epo, [d]evice or [s]kip? " answer
     case "$answer" in
       r) copy "$repo" "$device"; echo "device updated from repo"; break ;;
-      d) copy "$device" "$repo"; echo "repo updated from device"; break ;;
+      d) cp "$device" "$(realpath "$repo")"; echo "repo updated from device"; break ;;
       s) echo "skipped"; break ;;
     esac
   done
