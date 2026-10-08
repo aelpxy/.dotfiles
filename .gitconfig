@@ -16,7 +16,7 @@
 	defaultBranch = main
 
 [core]
-	editor = zed --wait
+	editor = nano
 	autocrlf = input
 	pager = less -FRX
 

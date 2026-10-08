@@ -5,8 +5,8 @@ if test -x /opt/homebrew/bin/brew
     /opt/homebrew/bin/brew shellenv | source
 end
 
-set -gx EDITOR "zed --wait"
-set -gx VISUAL "zed --wait"
+set -gx EDITOR nano
+set -gx VISUAL nano
 
 set -gx GOPATH $HOME/.go
 if test (uname) = Darwin
