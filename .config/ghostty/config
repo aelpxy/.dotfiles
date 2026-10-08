@@ -18,7 +18,7 @@ window-padding-y = 10
 window-padding-balance = true
 window-inherit-working-directory = true
 background-opacity = 0.9
-background-blur-radius = 20
+background-blur = true
 unfocused-split-opacity = 0.85
 
 # ---------- Cursor ----------

@@ -70,9 +70,9 @@ node_lts="$(dnf repoquery -q --qf '%{name}\n' 'nodejs[0-9][0-9]' | grep -E '^nod
 sudo dnf install -y "$node_lts" "$node_lts-bin" "${PACKAGES[@]}"
 
 echo "==> starship"
-if ! command -v starship >/dev/null; then
-  curl -fsSL https://starship.rs/install.sh | sh -s -- -y
-fi
+sudo dnf install -y dnf5-plugins
+sudo dnf copr enable -y atim/starship
+sudo dnf install -y starship
 
 if [ "$want_bun" = "y" ] && ! command -v bun >/dev/null; then
   echo "==> bun"
