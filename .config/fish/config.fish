@@ -8,6 +8,12 @@ end
 set -gx EDITOR nano
 set -gx VISUAL nano
 
+set -gx FZF_DEFAULT_OPTS "\
+--color=fg:#bfbdb6,bg:-1,hl:#e6b450 \
+--color=fg+:#ffffff,bg+:#1b2433,hl+:#ffb454,gutter:-1 \
+--color=info:#59c2ff,prompt:#e6b450,pointer:#e6b450,marker:#aad94c \
+--color=spinner:#95e6cb,header:#686868,border:#686868,query:#bfbdb6"
+
 set -gx GOPATH $HOME/.go
 if test (uname) = Darwin
     set -gx PNPM_HOME "$HOME/Library/pnpm"
