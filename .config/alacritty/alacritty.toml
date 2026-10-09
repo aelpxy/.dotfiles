@@ -1,0 +1,75 @@
+# ---------- General ----------
+[general]
+live_config_reload = true
+
+# ---------- Window ----------
+[window]
+padding = { x = 12, y = 10 }
+dynamic_padding = true
+decorations = "Full"
+opacity = 0.9
+blur = true
+dynamic_title = true
+
+[scrolling]
+history = 100000
+
+# ---------- Font ----------
+[font]
+size = 18.0
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Bold Italic" }
+offset = { x = 0, y = 4 }
+glyph_offset = { x = 0, y = 2 }
+
+# ---------- Cursor ----------
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+unfocused_hollow = true
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+save_to_clipboard = true
+
+# ---------- Keybinds ----------
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+]
+
+# ---------- Theme (Ayu) ----------
+[colors.primary]
+background = "#0b0e14"
+foreground = "#bfbdb6"
+
+[colors.cursor]
+text = "#0b0e14"
+cursor = "#e6b450"
+
+[colors.selection]
+text = "#0b0e14"
+background = "#409fff"
+
+[colors.normal]
+black = "#11151c"
+red = "#ea6c73"
+green = "#7fd962"
+yellow = "#f9af4f"
+blue = "#53bdfa"
+magenta = "#cda1fa"
+cyan = "#90e1c6"
+white = "#c7c7c7"
+
+[colors.bright]
+black = "#686868"
+red = "#f07178"
+green = "#aad94c"
+yellow = "#ffb454"
+blue = "#59c2ff"
+magenta = "#d2a6ff"
+cyan = "#95e6cb"
+white = "#ffffff"

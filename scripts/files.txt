@@ -4,6 +4,7 @@
 .config/fish/config.fish
 .config/starship.toml
 .config/ghostty/config
+.config/alacritty/alacritty.toml
 .config/zed/settings.json
 .claude/CLAUDE.md
 .claude/settings.json
