@@ -17,7 +17,7 @@ DOTFILES="$(cd "$(dirname "$0")/.." && pwd)"
 PACKAGES=(
   gcc make git gh openssh-clients gnupg2 lsof
   fish zoxide lsd fzf ripgrep fd-find bat
-  golang pnpm
+  golang pnpm rustup
   btop fastfetch jq wget2-wget zip unzip
 )
 
@@ -73,6 +73,11 @@ echo "==> starship"
 sudo dnf install -y dnf5-plugins
 sudo dnf copr enable -y atim/starship
 sudo dnf install -y starship
+
+if [ ! -x ~/.cargo/bin/rustc ]; then
+  echo "==> rust"
+  rustup-init -y --no-modify-path
+fi
 
 if [ "$want_bun" = "y" ] && ! command -v bun >/dev/null; then
   echo "==> bun"
