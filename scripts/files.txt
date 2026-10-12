@@ -5,6 +5,7 @@
 .config/starship.toml
 .config/ghostty/config
 .config/alacritty/alacritty.toml
+.config/kitty/kitty.conf
 .config/zed/settings.json
 .claude/CLAUDE.md
 .claude/settings.json
