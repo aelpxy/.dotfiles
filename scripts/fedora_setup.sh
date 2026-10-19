@@ -157,6 +157,9 @@ fi
 if ! command -v codex >/dev/null; then
   curl -fsSL https://chatgpt.com/codex/install.sh | sh
 fi
+if [ ! -x ~/.opencode/bin/opencode ]; then
+  curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path
+fi
 
 echo "==> dotfiles"
 mkdir -p ~/.ssh ~/.gnupg
