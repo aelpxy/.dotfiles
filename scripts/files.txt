@@ -11,3 +11,4 @@
 .claude/settings.json
 .codex/AGENTS.md
 .config/opencode/AGENTS.md
+.config/opencode/cli.json
