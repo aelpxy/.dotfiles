@@ -10,3 +10,4 @@
 .claude/CLAUDE.md
 .claude/settings.json
 .codex/AGENTS.md
+.config/opencode/AGENTS.md
