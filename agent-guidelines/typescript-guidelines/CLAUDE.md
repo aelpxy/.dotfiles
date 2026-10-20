@@ -86,7 +86,9 @@ TypeScript 7, Node.js 24 LTS, ESM only, `pnpm`. Frontends are Vite + React with 
 - Catch variables are `unknown`; narrow with `instanceof` before use.
 - Messages lowercase, no trailing punctuation, say what was being done: `` `read config ${path}` ``.
 - Never swallow errors with an empty `catch`; log or rethrow, not both.
-- Expected failures that callers branch on are part of the return type (discriminated union) or a dedicated error class; never parse error messages.
+- Retryable infrastructure errors carry `readonly isRetryable = true`; `retry` checks that, never the message.
+- Expected failures that callers branch on are returned as `Result<T, E>` from `src/lib/result.ts`, with `E` a union of error classes; never parse error messages.
+- `throw` only for bugs and infrastructure faults callers can't handle; never return a `Result` and also throw for the same failure.
 
 ## Async
 
@@ -95,7 +97,123 @@ TypeScript 7, Node.js 24 LTS, ESM only, `pnpm`. Frontends are Vite + React with 
 - `Promise.all` for independent work; `await` in loops only when order matters, with a reason.
 - No `.then` chains; `async`/`await` only.
 - No `new Promise` around APIs that already return promises.
+- Concurrent work runs in a scope from `src/lib/scope.ts`: one `AbortController` linked to the parent signal, aborted on the first failure and on dispose, so siblings never outlive the scope.
+- Retries via `retry(fn, { attempts, baseDelayMs, signal })` from `src/lib/retry.ts`: exponential backoff with jitter, stops on abort, retries only errors marked retryable.
 - Node shutdown: handle `SIGINT`/`SIGTERM`, stop accepting work, drain with a deadline.
+
+```ts
+export async function fetchAll(ids: readonly UserId[], signal: AbortSignal): Promise<User[]> {
+  await using scope = createScope(signal)
+
+  return await Promise.all(ids.map((id) => scope.run((s) => fetchUser(id, s))))
+}
+```
+
+## Resources
+
+- Anything that needs cleanup (connections, locks, temp dirs, subprocesses, scopes) implements `Symbol.asyncDispose` or `Symbol.dispose`.
+- Acquire with `await using`/`using`; never pair acquire and release by hand in `try`/`finally`.
+- `AsyncDisposableStack` when a function acquires several resources or adopts ones that aren't disposable (`stack.adopt(handle, close)`).
+- Dispose never throws for an already-released resource.
+
+## Reference modules
+
+Copy into `src/lib/` when first needed; adapt, don't add options nobody uses.
+
+```ts
+// src/lib/result.ts
+export type Result<T, E> = { readonly ok: true; readonly value: T } | { readonly ok: false; readonly error: E }
+
+export function ok<T>(value: T): Result<T, never> {
+  return { ok: true, value }
+}
+
+export function err<E>(error: E): Result<never, E> {
+  return { ok: false, error }
+}
+```
+
+```ts
+// src/lib/scope.ts
+export class ScopeClosedError extends Error {
+  override readonly name = 'ScopeClosedError'
+}
+
+export type Scope = AsyncDisposable & {
+  readonly signal: AbortSignal
+  readonly run: <T>(task: (signal: AbortSignal) => Promise<T>) => Promise<T>
+}
+
+export function createScope(parent: AbortSignal): Scope {
+  const controller = new AbortController()
+  const signal = AbortSignal.any([parent, controller.signal])
+  const pending = new Set<Promise<unknown>>()
+
+  async function run<T>(task: (signal: AbortSignal) => Promise<T>): Promise<T> {
+    signal.throwIfAborted()
+    const promise = task(signal)
+    pending.add(promise)
+
+    try {
+      return await promise
+    } catch (error) {
+      controller.abort(error)
+      throw error
+    } finally {
+      pending.delete(promise)
+    }
+  }
+
+  async function dispose(): Promise<void> {
+    controller.abort(new ScopeClosedError('close scope'))
+    await Promise.allSettled(pending)
+  }
+
+  return { signal, run, [Symbol.asyncDispose]: dispose }
+}
+```
+
+```ts
+// src/lib/retry.ts
+import { setTimeout as sleep } from 'node:timers/promises'
+
+const DEFAULT_MAX_DELAY_MS = 30_000
+
+export type RetryOptions = {
+  readonly attempts: number
+  readonly baseDelayMs: number
+  readonly maxDelayMs?: number
+  readonly signal: AbortSignal
+}
+
+function isRetryable(error: unknown): boolean {
+  return error instanceof Error && 'isRetryable' in error && error.isRetryable === true
+}
+
+function backoffMs(attempt: number, baseDelayMs: number, maxDelayMs: number): number {
+  return Math.random() * Math.min(maxDelayMs, baseDelayMs * 2 ** (attempt - 1))
+}
+
+export async function retry<T>(fn: (signal: AbortSignal) => Promise<T>, options: RetryOptions): Promise<T> {
+  const { attempts, baseDelayMs, maxDelayMs = DEFAULT_MAX_DELAY_MS, signal } = options
+
+  async function run(attempt: number): Promise<T> {
+    try {
+      return await fn(signal)
+    } catch (error) {
+      if (attempt >= attempts || !isRetryable(error)) {
+        throw error
+      }
+    }
+
+    await sleep(backoffMs(attempt, baseDelayMs, maxDelayMs), undefined, { signal })
+
+    return await run(attempt + 1)
+  }
+
+  return await run(1)
+}
+```
 
 ## React
 
@@ -195,7 +313,7 @@ export async function startService(deps: Deps, name: ServiceName, signal: AbortS
 
 - Copy `.oxlintrc.json` and `.oxfmtrc.json` to the project root and merge the strictness flags from `tsconfig.json` into the project's tsconfig.
 - Dev deps: `typescript`, `@types/node`, `oxlint`, `oxlint-tsgolint` (type-aware rules), `oxfmt`, `vitest`.
-- Vite apps keep their tsconfig's `lib` (`dom`), `jsx`, `module`/`moduleResolution: bundler`, and `types`; only the strictness flags are shared.
+- Vite apps keep their tsconfig's `lib` (`dom`, plus `esnext.disposable`), `jsx`, `module`/`moduleResolution: bundler`, and `types`; only the strictness flags are shared.
 - Never weaken lints, tsconfig strictness, or formatter settings; fix the code.
 - Suppress only with `// oxlint-disable-next-line <rule> -- <reason>` on the smallest scope; the reason says why the code is correct. No file-wide disables.
 
