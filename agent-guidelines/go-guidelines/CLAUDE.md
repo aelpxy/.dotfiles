@@ -7,9 +7,11 @@ Target: Go 1.27, static Linux binaries (`CGO_ENABLED=0`), Alpine (musl) compatib
 - Simple, explicit code first; optimize only with evidence (benchmark or profile).
 - Smallest correct change; no unrelated refactors, renames, or reformatting.
 - Stdlib before dependencies; every new module needs a clear reason.
+- Make invalid states unrepresentable; parse untrusted input into validated types at the boundary, then trust the type.
 - Small packages with a single purpose; no `util`, `common`, or `helpers` packages.
 - Accept interfaces, return concrete types; define interfaces where they are consumed.
 - Keep the zero value useful; avoid constructors that only set defaults.
+- No abstraction without two real callers; extract duplicated code on the third copy, not before.
 
 ## Layout
 
@@ -39,6 +41,13 @@ Follow Effective Go, Go Code Review Comments, and the Google Go Style Guide; rul
 - Single-method interfaces end in `-er`: `Reader`, `Mounter`.
 - Unexported by default; export only what other packages need.
 
+## Types
+
+- Distinct types for IDs and validated values (`type ContainerID string`), built only by a validating `Parse`/`New` function.
+- Typed constants for states and choices, never strings, bools, or paired fields.
+- `switch` over own enum types lists every case (enforced by `exhaustive`); no `default` that hides new values.
+- No sentinel values (`-1`, `""`) for absence; use a second return value, a pointer, or a dedicated type.
+
 ## Comments
 
 - Avoid; when needed, one line on *why*. No restating code, commented-out code, banners, `TODO` without an issue ref, or doc comments repeating the name.
@@ -48,7 +57,7 @@ Follow Effective Go, Go Code Review Comments, and the Google Go Style Guide; rul
 - Early returns and guard clauses; handle errors and edge cases first, keep the happy path left-aligned.
 - No `else` after a `return`, `break`, `continue`, or `panic`.
 - Maximum nesting depth of three; extract a function instead of nesting deeper.
-- Keep functions short and focused on one job; split when a function needs section breaks to be understood.
+- Keep functions under 60 lines and focused on one job; split when a function needs section breaks to be understood.
 - No naked returns; use named results only when they document meaning or are needed for `defer`.
 - Prefer `switch` over long `if`/`else if` chains.
 
@@ -166,6 +175,14 @@ func (m *Manager) Start(ctx context.Context, name string) error {
 - Subprocesses: `exec.CommandContext` with separate args and a timeout, exit status checked; never `sh -c` with interpolation.
 - Read env vars once at startup into one validated config struct; never `os.Getenv` deep in code. Invalid config fails fast with a clear message.
 
+## CLI
+
+- Stdlib `flag`; one `flag.FlagSet` per subcommand in its own file under `cmd/<binary>/`.
+- Config layered defaults → file → env → flags into the one validated config struct.
+- Exit codes `0` ok, `1` failure, `2` usage; only `main` calls `os.Exit`, after deferred cleanup has run.
+- Results to stdout, progress/diagnostics to stderr; `--json` for machine output; color only on a TTY and never with `NO_COLOR`.
+- Destructive commands confirm unless `-y`; refuse without a TTY.
+
 ## Security
 
 - Validate all external input at the boundary: names, paths, URLs, ports, sizes.
@@ -173,6 +190,12 @@ func (m *Manager) Start(ctx context.Context, name string) error {
 - SQL uses bound params only.
 - Never log secrets, tokens, or user data.
 - Constant-time secret comparison (`crypto/subtle`); store only hashes of tokens and passwords.
+
+## Dependencies
+
+- Few, widely used, maintained modules; check last release, maintainers, and transitive weight.
+- Depend on tagged releases, not pseudo-versions; no `replace` directives in released code.
+- Commit `go.sum`.
 
 ## Testing
 

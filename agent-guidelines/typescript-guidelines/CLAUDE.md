@@ -102,10 +102,21 @@ TypeScript 7, Node.js 24 LTS, ESM only, `pnpm`. Frontends are Vite + React with 
 - Function components only; one exported component per file; props type named `<Component>Props` with `readonly` fields.
 - The React Compiler memoizes; no manual `useMemo`, `useCallback`, or `memo`.
 - No `useEffect` for derived state or for responding to events; compute during render or in the handler. Effects only sync with external systems.
-- Server state in TanStack Query, forms in TanStack Form, URL state in router search params validated with zod; no copying server data into `useState`.
+- Server state in TanStack Query, forms in TanStack Form, URL state in TanStack Router search params validated with zod; no copying server data into `useState`.
 - Stable keys from data, never array indexes.
 - Accessible by default: semantic elements, `type` on every `<button>`, labels on inputs, no click handlers on non-interactive elements.
 - No `dangerouslySetInnerHTML`.
+
+## Files, processes, CLI
+
+- Atomic writes: temp file in the same dir, `filehandle.sync()`, `rename`; fsync the dir when durability matters.
+- Paths built with `node:path` `join`/`resolve`, never string concatenation; `mkdir(dir, { recursive: true })`; explicit `mode: 0o600` for secrets.
+- Subprocesses: `execFile`/`spawn` with separate args, a `signal` or `timeout`, and the exit code checked.
+- CLI args with `node:util` `parseArgs`; one module per subcommand.
+- Config layered defaults → file → env → flags into the one validated config object.
+- Exit codes `0` ok, `1` failure, `2` usage; set `process.exitCode` instead of calling `process.exit()`.
+- Results to stdout, progress/diagnostics to stderr; `--json` for machine output; color only on a TTY and never with `NO_COLOR`.
+- Destructive commands confirm unless `-y`; refuse without a TTY.
 
 ## Comments
 
@@ -144,7 +155,7 @@ export async function startService(deps: Deps, name: ServiceName, signal: AbortS
 
 ## Logging
 
-- Structured logs with fields, not interpolation: `logger.info({ machineId }, 'machine started')`.
+- Structured logs with `pino`, fields not interpolation: `logger.info({ machineId }, 'machine started')`.
 - No `console.*` outside CLI output code.
 - Never log secrets, tokens, or user data.
 
@@ -183,7 +194,7 @@ export async function startService(deps: Deps, name: ServiceName, signal: AbortS
 ## Lints
 
 - Copy `.oxlintrc.json` and `.oxfmtrc.json` to the project root and merge the strictness flags from `tsconfig.json` into the project's tsconfig.
-- Dev deps: `typescript`, `oxlint`, `oxlint-tsgolint` (type-aware rules), `oxfmt`, `vitest`.
+- Dev deps: `typescript`, `@types/node`, `oxlint`, `oxlint-tsgolint` (type-aware rules), `oxfmt`, `vitest`.
 - Vite apps keep their tsconfig's `lib` (`dom`), `jsx`, `module`/`moduleResolution: bundler`, and `types`; only the strictness flags are shared.
 - Never weaken lints, tsconfig strictness, or formatter settings; fix the code.
 - Suppress only with `// oxlint-disable-next-line <rule> -- <reason>` on the smallest scope; the reason says why the code is correct. No file-wide disables.

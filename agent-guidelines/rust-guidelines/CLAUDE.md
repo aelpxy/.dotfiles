@@ -62,7 +62,7 @@ Stable Rust, edition 2024, `rust-version` pinned, Linux first. These rules overr
 ## Control flow
 
 - Early returns (`let ... else`, `?`, guards); happy path unindented; max nesting depth 3.
-- Functions do one job, under ~50 lines; split if they need section comments.
+- Functions do one job, under ~80 lines; split if they need section comments.
 - Match own enums exhaustively, no `_` arm (fine for foreign `#[non_exhaustive]`).
 - Iterator chains when clear; `for` loops for side effects, stateful early exit, or more than ~4 adapters. No manual `Vec`-building loops that `map`/`filter`/`collect` express.
 - No `collect::<Vec<_>>()` only to iterate again, `.iter().count()` on slices, or `.len() == 0`.
@@ -245,7 +245,7 @@ pub async fn start(&self, name: &ServiceName) -> Result<MachineId, StartError> {
 - Declared once in `[workspace.dependencies]`, used as `dep = { workspace = true }`, `default-features = false` with only needed features.
 - Few, widely used, maintained crates; check last release, maintainers, transitive weight.
 - No wildcard or git deps in released code; commit `Cargo.lock` for binaries.
-- `cargo deny check` and `cargo machete` pass.
+- `cargo deny check` (config in `deny.toml`) and `cargo machete` pass.
 
 ## Testing
 
@@ -262,7 +262,7 @@ pub async fn start(&self, name: &ServiceName) -> Result<MachineId, StartError> {
 
 ## Lints
 
-- Workspace root `Cargo.toml` includes the block from `lints.toml`; each crate sets `[lints] workspace = true`; copy `clippy.toml` alongside.
+- Workspace root `Cargo.toml` includes the block from `lints.toml`; each crate sets `[lints] workspace = true`; copy `clippy.toml` and `deny.toml` alongside.
 - Binary-only crates may put `#![expect(clippy::print_stdout, reason = "cli output")]` atop the CLI output module.
 - Library crates add `#![warn(missing_docs)]` to `lib.rs`; Cargo rejects per-crate `[lints]` overrides alongside `workspace = true`.
 - Never weaken lints, `clippy.toml`, or `-D warnings`; fix the code.
