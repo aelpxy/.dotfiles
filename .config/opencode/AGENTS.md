@@ -1,1 +1,1 @@
-../../.codex/AGENTS.md
+../../.claude/CLAUDE.md
