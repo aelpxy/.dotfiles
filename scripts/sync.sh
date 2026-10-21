@@ -46,7 +46,7 @@ local_path() {
 copy() {
   mkdir -p "$(dirname "$2")"
   rm -f "$2"
-  cp "$1" "$2"
+  cp -P "$1" "$2"
 }
 
 for file in "${FILES[@]}"; do

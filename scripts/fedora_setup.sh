@@ -48,7 +48,7 @@ copy() {
   elif [ -e "$dest" ] && ! cmp -s "$src" "$dest"; then
     mv "$dest" "$dest.bak"
   fi
-  cp "$src" "$dest"
+  cp -P "$src" "$dest"
   echo "copied ~/${2:-$1}"
 }
 
@@ -87,7 +87,7 @@ fi
 
 if has_gui; then
   echo "==> gui apps"
-  sudo dnf install -y dnf5-plugins flatpak
+  sudo dnf install -y flatpak
   sudo dnf copr enable -y scottames/ghostty
   sudo dnf copr enable -y imput/helium
 

@@ -17,7 +17,7 @@ DOTFILES="$(cd "$(dirname "$0")/.." && pwd)"
 PACKAGES=(
   base-devel git github-cli openssh gnupg lsof
   fish starship zoxide lsd fzf ripgrep fd bat
-  go pnpm
+  go pnpm rustup
   btop fastfetch jq wget zip unzip pciutils
 )
 
@@ -67,7 +67,7 @@ copy() {
   elif [ -e "$dest" ] && ! cmp -s "$src" "$dest"; then
     mv "$dest" "$dest.bak"
   fi
-  cp "$src" "$dest"
+  cp -P "$src" "$dest"
   echo "copied ~/${2:-$1}"
 }
 
@@ -90,6 +90,11 @@ sudo pacman -Syu --noconfirm
 # lts codenames are alphabetical, so the last one is the newest
 node_lts="$(pacman -Ssq '^nodejs-lts-' | sort | tail -n1)"
 sudo pacman -S --needed --noconfirm "$node_lts" "${PACKAGES[@]}"
+
+if ! rustup default >/dev/null 2>&1; then
+  echo "==> rust"
+  rustup default stable
+fi
 
 echo "==> paru"
 if ! command -v paru >/dev/null; then
@@ -131,6 +136,9 @@ if ! command -v claude >/dev/null; then
 fi
 if ! command -v codex >/dev/null; then
   curl -fsSL https://chatgpt.com/codex/install.sh | sh
+fi
+if [ ! -x ~/.opencode/bin/opencode ]; then
+  curl -fsSL https://opencode.ai/v2/install | bash -s -- --no-modify-path
 fi
 
 echo "==> dotfiles"
