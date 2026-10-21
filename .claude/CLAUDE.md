@@ -7,7 +7,7 @@
 
 ## Code
 
-* Make the smallest correct change; avoid unrelated refactors.
+* Make the smallest correct change and avoid unrelated refactors.
 * Avoid comments unless absolutely necessary.
 * When needed, comments must be one line and explain the reason as clearly and concisely as possible.
 * Prefer explicit, minimal, maintainable code over clever abstractions.
