@@ -1,5 +1,6 @@
 .gitconfig
 .ssh/config
+.ssh/config.local
 .gnupg/gpg-agent.conf
 .config/fish/config.fish
 .config/starship.toml
