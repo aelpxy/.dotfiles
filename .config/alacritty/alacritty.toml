@@ -4,6 +4,7 @@ live_config_reload = true
 
 # ---------- Window ----------
 [window]
+dimensions = { columns = 125, lines = 35 }
 padding = { x = 12, y = 10 }
 dynamic_padding = true
 decorations = "Full"
@@ -16,7 +17,7 @@ history = 100000
 
 # ---------- Font ----------
 [font]
-size = 18.0
+size = 13.0
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
 bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
 italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }

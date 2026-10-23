@@ -1,9 +1,9 @@
 # ---------- Theme ----------
-theme = ayu
+theme = Ayu
 
 # ---------- Font ----------
 font-family = JetBrainsMono Nerd Font Mono
-font-size = 18
+font-size = 13
 font-feature = calt
 font-feature = liga
 adjust-cell-height = 12%
@@ -13,6 +13,8 @@ window-decoration = server
 gtk-titlebar = true
 gtk-tabs-location = top
 gtk-wide-tabs = false
+window-width = 125
+window-height = 35
 window-padding-x = 12
 window-padding-y = 10
 window-padding-balance = true
