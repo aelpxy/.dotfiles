@@ -5,14 +5,14 @@ davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 golang.go
-ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
 ms-vscode.hexeditor
+ms-vscode-remote.remote-wsl
 openai.chatgpt
 openai.codex-audio
 oxc.oxc-vscode
-platformio.platformio-ide
 prisma.prisma
+rust-lang.rust-analyzer
 svelte.svelte-vscode
 tamasfe.even-better-toml
 unifiedjs.vscode-mdx
