@@ -1,18 +1,18 @@
 {
   "theme": {
     "mode": "system",
-    "light": "Zedokai Darker (Filter Spectrum)",
-    "dark": "Zedokai Darker (Filter Spectrum)"
+    "light": "Ayu Light",
+    "dark": "Ayu Dark",
   },
   "icon_theme": {
     "mode": "system",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
   },
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_size": 16,
   "ui_font_size": 16,
-  "show_whitespaces": "all",
+  "show_whitespaces": "selection",
   "base_keymap": "VSCode",
   "vim_mode": false,
   "format_on_save": "on",
@@ -22,39 +22,76 @@
   "disable_ai": true,
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
   "project_panel": {
     "dock": "left",
     "git_status_indicator": true,
     "show_diagnostics": "errors",
-    "diagnostic_badges": false
+    "diagnostic_badges": false,
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
     "button": false,
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
     "dock": "left",
     "file_icons": true,
-    "tree_view": false
+    "tree_view": false,
   },
   "title_bar": {
-    "show_branch_status_icon": true
+    "show_branch_status_icon": true,
   },
   "status_bar": {
-    "line_endings_button": false
+    "line_endings_button": false,
   },
   "terminal": {
     "toolbar": {
-      "breadcrumbs": false
-    }
+      "breadcrumbs": false,
+    },
   },
   "session": {
-    "trust_all_worktrees": true
+    "trust_all_worktrees": true,
   },
-  "accessible_mode": true
+  "accessible_mode": true,
+  "auto_install_extensions": {
+    "material-icon-theme": true,
+  },
+  "minimap": {
+    "show": "always",
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "errors",
+  },
+  "indent_guides": {
+    "coloring": "indent_aware",
+  },
+  "scrollbar": {
+    "show": "always",
+  },
+  "auto_signature_help": true,
+  "hover_popover_delay": 300,
+  "inlay_hints": {
+    "enabled": true,
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
 }
