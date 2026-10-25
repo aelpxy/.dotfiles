@@ -2,7 +2,7 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Ayu Dark",
+    "dark": "VSCode Dark Modern",
   },
   "icon_theme": {
     "mode": "system",
@@ -58,7 +58,18 @@
   },
   "accessible_mode": true,
   "auto_install_extensions": {
+    "docker-compose": true,
+    "dockerfile": true,
+    "env": true,
+    "fish": true,
+    "git-firefly": true,
+    "html": true,
+    "make": true,
     "material-icon-theme": true,
+    "nix": true,
+    "sql": true,
+    "toml": true,
+    "vscode-dark-modern": true,
   },
   "minimap": {
     "show": "always",
